@@ -1,0 +1,218 @@
+.otpstudentlogincontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* border: 1px solid red; */
+  /* width: 100%; */
+  height: 100%;
+  margin-top: 20px;
+}
+.otpcenterstudentlogincontainer {
+  /* border: 1px solid red; */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: -1px 0px 8px 0px grey;
+  /* width: 527.03px; */
+}
+.otpstudentlogintopimage {
+  /* border: 1px solid tan; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.otpstudentlogintopimage img {
+  width: 400px;
+  height: 189px;
+  border-radius: 20px;
+  object-position: 0 -157px;
+  object-fit: cover;
+}
+.otpbelowstudentlogintopimage {
+  /* border: 1px solid yellow; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 47px;
+}
+.otpbelowstudentlogintopimage h1 {
+  font-family: "ZCOOL XiaoWei", serif;
+  font-size: 25px;
+  color: #9f9b67;
+}
+
+.otpbelowstudentlogintopimage p {
+  font-family: "Padauk", sans-serif;
+
+  color: #a9967d;
+}
+.otpUsernameinputstudentlogin {
+  /* border: 1px solid purple; */
+  /* width: 100%; */
+  padding: 10px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 490px;
+}
+.otpUsernameinputstudentlogin h5 {
+  margin-right: 15px;
+  font-family: "ZCOOL XiaoWei", serif;
+  /* font-size: 25px; */
+  color: #9f9b67;
+}
+.otpUsernameinputstudentlogin input {
+  width: 280px;
+  padding-left: 26px;
+}
+.otpdivofgetotpbutton {
+  width: 100%;
+  /* border: 1px solid tomato; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#GetOTPButton {
+  padding: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px dashed;
+  /* background-color: #c4c4c4; */
+  color: #93a8b2;
+  background-color: black;
+  cursor: pointer;
+
+  font-size: 12px;
+  /* color: black; */
+  text-decoration: none;
+}
+#GetOTPButton:hover {
+  color: rgb(221, 158, 41);
+  background-color: black;
+}
+.otplock_logo {
+  position: absolute;
+  top: 19px;
+  left: 161px;
+  color: rgb(117 106 125);
+}
+.otpusercredential {
+  /* border: 1px solid red; */
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+  margin-top: 25px;
+}
+.otpusercredential_line {
+  width: 90px;
+  height: 0px;
+
+  border: 1px solid #d3b5b5;
+}
+.otpusercreditname {
+  display: flex;
+  flex-direction: column;
+}
+.otpwhitecorrectsignimage {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #37d01e;
+  position: relative;
+
+  /* border: 2px solid rgb(184, 166, 166); */
+}
+.otptickimage {
+  color: black;
+  background: white;
+  border-radius: 50px;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+}
+.otpotpverificationtwo {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ffa500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.otpnamingverification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #a9967d;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+#userinsidenamingverification {
+  margin-right: 10px;
+}
+#otpinsidenamingverification {
+  margin-left: 10px;
+}
+.otpparaaboveenterOTP {
+  width: 523px;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.otpparaaboveenterOTP p {
+  font-family: "Padauk", sans-serif;
+  color: #84839b;
+}
+.otptimer {
+  position: absolute;
+  color: #9f9b67;
+  right: 62px;
+  /* border: 1px solid red; */
+}
+.OtpOpacityZero {
+  opacity: 0;
+  /* border: 1px solid red; */
+
+  position: absolute;
+  right: 62px;
+}
+.OtpOpacityZeroresend {
+  /* border: 1px solid red; */
+  opacity: 0;
+  position: absolute;
+  right: 62px;
+}
+.resendhover {
+  color: #a26363;
+}
+.resendhover:hover {
+  cursor: pointer;
+  color: #519793;
+}
+.otperrorpositionrelative {
+  position: relative;
+}
+.otpblankerror {
+  color: red;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 81px;
+  top: -12px;
+  font-size: 13px;
+}

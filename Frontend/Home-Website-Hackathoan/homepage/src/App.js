@@ -11,7 +11,11 @@ import Events from "./components/Events";
 import Newsbulletin from "./components/Newsbulletin";
 import Quickinfo from "./components/Quickinfo";
 import Archives from "./components/Archives";
-
+import Calender from "./components/Calender";
+import Studentlogin from "./components/Studentlogin";
+import Officiallogin from "./components/Officiallogin";
+import Otpverificationpage from "./components/Otpverificationpage";
+import Blanktextarea from "./components/Blanktextarea";
 import {
   BrowserRouter as Router,
   Redirect,
@@ -27,7 +31,7 @@ function App() {
     <>
       <Router>
         <div className="body">
-          <nav className="navbar">
+          <nav className="navbars">
             <ul>
               <li className="navitem navitem_top">
                 <NavLink to="/" exact>
@@ -92,6 +96,23 @@ function App() {
             </Route>
             <Route path="/Archives" exact>
               <Archives />
+            </Route>
+            <Route path="/Calender" exact>
+              <Calender />
+            </Route>
+            <Route path="/Studentlogin" exact>
+              <Studentlogin />
+            </Route>
+            <Route path="/Officiallogin" exact>
+              <Officiallogin />
+            </Route>
+
+            <Route path="/Otpverificationpage" exact>
+              <Otpverificationpage />
+            </Route>
+
+            <Route path="/Blanktextarea" exact>
+              <Blanktextarea />
             </Route>
             <Route path="/" exact>
               <Home />

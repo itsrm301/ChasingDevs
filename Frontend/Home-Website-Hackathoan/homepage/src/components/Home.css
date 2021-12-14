@@ -1,0 +1,163 @@
+.HomeContainer {
+  display: flex;
+  /* border: 2px solid yellow; */
+  margin-top: 20px;
+  width: 100%;
+  /* height: 100%; */
+}
+.LeftHomeContainer {
+  /* border: 1px solid maroon; */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+.RightHomeContainer {
+  /* border: 1px solid rgb(207, 179, 179); */
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+.FooterRightHomeContainer {
+  margin-top: 138px;
+  /* border: 2px solid red; */
+  /* padding: 20px; */
+}
+#HomeCalender {
+  padding: 4px;
+  border: 1px dashed;
+  color: #93a8b2;
+  background-color: black;
+
+  cursor: pointer;
+
+  font-size: 12px;
+  /* color: black; */
+  text-decoration: none;
+}
+#HomeCalender:hover {
+  color: rgb(221, 158, 41);
+  background-color: black;
+}
+.headingbelowCalenderButton h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 58px;
+  line-height: 68px;
+  color: #64786c;
+}
+.LoginButton {
+  display: flex;
+}
+#StudentLogin {
+  padding: 4px;
+  border: 1px dashed;
+  /* background-color: rgb(221, 158, 41); */
+  /* background-color: #c4c4c4; */
+  color: #93a8b2;
+  background-color: black;
+
+  cursor: pointer;
+  margin-right: 15px;
+  font-size: 12px;
+  /* color: black; */
+  text-decoration: none;
+}
+#StudentLogin:hover {
+  color: rgb(221, 158, 41);
+  background-color: black;
+}
+
+#OfficialLogin {
+  padding: 4px;
+  border: 1px dashed;
+  /* background-color: #c4c4c4; */
+  color: #93a8b2;
+  background-color: black;
+  cursor: pointer;
+
+  font-size: 12px;
+  /* color: black; */
+  text-decoration: none;
+}
+#OfficialLogin:hover {
+  color: rgb(221, 158, 41);
+  background-color: black;
+}
+.TSGHACKATHOAN {
+  /* border: 1px solid teal; */
+  padding: 12px;
+  padding-bottom: 0;
+  padding-left: 15px;
+  color: rgb(89 99 104);
+}
+.calenderButton {
+  /* border: 1px solid yellow; */
+  padding: 12px;
+  padding-top: 0;
+  margin-top: -4px;
+  /* color: black; */
+}
+.headingbelowCalenderButton {
+  /* border: 1px solid teal; */
+  padding: 12px;
+}
+.LoginButton {
+  /* border: 1px solid firebrick; */
+  padding: 12px;
+  padding-top: 0;
+  color: black;
+}
+.paraaboveloginbutton p {
+  /* font-family: Roboto; */
+  /* font-style: normal;
+  font-weight: normal; */
+  font-size: 14px;
+  /* line-height: 16px; */
+  /* color: #ffffff; */
+  /* border: 1px solid tan; */
+  padding: 12px;
+  padding-bottom: 0;
+  color: #94948b;
+}
+.paraabovecalenderbutton p {
+  font-size: 14px;
+  /* line-height: 16px; */
+  color: #ffffff;
+  /* border: 1px solid tan; */
+  padding: 12px;
+  padding-bottom: 0px;
+  padding-top: 14px;
+  color: #94948b;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  margin-top: 336px;
+  color: rgb(238, 216, 14);
+  background-color: black;
+  border-radius: 50%;
+  border: 1px dashed;
+  /* padding: 4px; */
+}
+
+.carousel-control-next-icon:hover {
+  color: rgb(17, 176, 224);
+}
+.carousel-control-prev-icon:hover {
+  color: rgb(17, 176, 224);
+}
+.carousel-indicators [data-bs-target] {
+  border-radius: 50%;
+}
+.captionHeading {
+  color: antiquewhite;
+}
+.captionpara {
+  color: #93a8b2;
+}
