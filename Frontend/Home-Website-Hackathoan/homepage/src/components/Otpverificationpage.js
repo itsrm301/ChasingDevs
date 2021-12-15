@@ -41,7 +41,7 @@ export default function Otpverificationpage() {
       setIsActive(true);
     } else {
       history.push("/Blanktextarea", {
-        itIsStudentLoginPage: "studentloginpage",
+        whichLoginpage: "student",
       });
     }
   }
@@ -63,7 +63,12 @@ export default function Otpverificationpage() {
     }
     return () => clearInterval(interval);
   }, [remainingSecs]);
-
+  function shouldBlur(e) {
+    e.target.blur();
+  }
+  function shouldFocus(e) {
+    e.target.focus();
+  }
   return (
     <>
       {" "}
@@ -115,6 +120,8 @@ export default function Otpverificationpage() {
               placeholder="One time password = ?"
               style={{ color: "white", border: "1px dashed rgb(221, 158, 41)" }}
               onChange={setuserOtpfun}
+              onMouseOut={shouldBlur}
+              onMouseOver={shouldFocus}
             />
           </div>
           <div className="otperrorpositionrelative">

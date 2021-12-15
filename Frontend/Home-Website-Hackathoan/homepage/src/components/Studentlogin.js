@@ -24,6 +24,12 @@ export default function Studentlogin() {
       history.push("/Otpverificationpage", { nameofEmail: `${usernameEmail}` });
     }
   }
+  function shouldBlur(e) {
+    e.target.blur();
+  }
+  function shouldFocus(e) {
+    e.target.focus();
+  }
 
   return (
     <>
@@ -53,6 +59,8 @@ export default function Studentlogin() {
               placeholder="Type your institute email id here"
               style={{ color: "white", border: "1px dashed rgb(221, 158, 41)" }}
               onChange={setinputusername}
+              onMouseOut={shouldBlur}
+              onMouseOver={shouldFocus}
             />
           </div>
           <div className="errorpositionrelative">
