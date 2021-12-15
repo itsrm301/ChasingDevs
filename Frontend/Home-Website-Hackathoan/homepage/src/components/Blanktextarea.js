@@ -1,18 +1,49 @@
 import React from "react";
+import { useState } from "react";
 import "./Blanktextarea.css";
 import { useLocation, useHistory } from "react-router-dom";
 export default function Blanktextarea() {
   //   const navigate = useNavigate();
   const history = useHistory();
   const location = useLocation();
-  const confirmStudentLoginPage = location.state.itIsStudentLoginPage;
+  const confirmLoginPage = location.state.whichLoginpage;
+  const [isActive, setIsActive] = useState(false);
+  const [isActiveanswerq, setIsActiveanswerq] = useState(false);
+  // const [isActiveerror, setIsActiveerror] = useState(false);
+  const [verifyButtonisclick, setverifyButtonisclick] = useState(false);
+
+  const [usernameAnswer, setusernameAnswer] = useState(" ");
+  const [iAMnotRobot, setAMnotRobot] = useState("I'm not a robot");
   function conditiononBlankOKbutton() {
-    if (confirmStudentLoginPage === "studentloginpage") {
+    if (confirmLoginPage === "Official") {
+      history.push("/Societypoint");
+    } else {
+      history.push("/Societypoint");
       history.push("/");
     }
-    // if (location.state.name === "Otpverificationpage") {
-    //   navigate("/Otpverificationpage");
-    // }
+  }
+  function shouldBlur(e) {
+    e.target.blur();
+    setusernameAnswer(e.target.value);
+    setverifyButtonisclick(false);
+  }
+  function shouldFocus(e) {
+    e.target.focus();
+  }
+  function setinputanswer(e) {
+    setusernameAnswer(e.target.value);
+    setIsActive(false);
+    // setIsActiveerror(false);
+  }
+  function verifyHuman(e) {
+    setverifyButtonisclick(true);
+    if (usernameAnswer !== "4") {
+      setAMnotRobot("You are not a Human ?");
+      e.target.value = "";
+    } else {
+      setIsActive(true);
+      setIsActiveanswerq(true);
+    }
   }
   return (
     <>
@@ -21,12 +52,112 @@ export default function Blanktextarea() {
       <div className="blankstudentlogincontainer">
         <div className="blankcenterstudentlogincontainer">
           <div className="blankbelowstudentlogintopimage">
-            <h1>
-              Login Succefully<span className="errorExclamatorysign"></span>
+            <h1
+              style={
+                isActive === false
+                  ? {
+                      opacity: "0",
+                      position: "absolute",
+                      top: "-10000000000px",
+                    }
+                  : { opacity: "1" }
+              }
+            >
+              Login Succefully
+              <span className="errorExclamatorysign">
+                <i class="far fa-check-circle"></i>
+              </span>
             </h1>
-            <p>Dear student, you have logged in sucessfully</p>
+            <div
+              className="BlanktextareaInput"
+              style={
+                isActiveanswerq === true
+                  ? {
+                      opacity: "0",
+                      position: "absolute",
+                      top: "-10000000000px",
+                    }
+                  : { opacity: "1" }
+              }
+            >
+              <h1
+                style={
+                  usernameAnswer !== "4" &&
+                  usernameAnswer !== " " &&
+                  verifyButtonisclick &&
+                  usernameAnswer.length !== 0
+                    ? { color: "red" }
+                    : { color: "#7e8a77" }
+                }
+              >
+                {iAMnotRobot}
+              </h1>
+              <input
+                type="text"
+                name="question"
+                id="Question"
+                autocomplete="off"
+                placeholder="What is 11 - 7 = ?"
+                style={
+                  usernameAnswer !== "4" &&
+                  usernameAnswer !== " " &&
+                  verifyButtonisclick
+                    ? {
+                        color: "white",
+                        border: "1px dashed red",
+                        fontSize: "14px",
+                      }
+                    : {
+                        color: "white",
+                        border: "1px dashed rgb(221, 158, 41)",
+                        fontSize: "14px",
+                      }
+                }
+                onChange={setinputanswer}
+                onMouseOut={shouldBlur}
+                onMouseOver={shouldFocus}
+              />
+              {/* <div className="errorpositionrelativeblanktextarea">
+                <div
+                  className="blankerrorblanktextare"
+                  style={
+                    isActiveerror === false
+                      ? { opacity: "0" }
+                      : { opacity: "1" }
+                  }
+                >
+                  Fill the text area !
+                </div>
+              </div> */}
+              {/* rgb(221, 158, 41) */}
+              <div className="blankVerifyHuman">
+                <div id="blankOKButtonVerify" onClick={verifyHuman}>
+                  Verify
+                </div>
+              </div>
+            </div>
+            <p
+              style={
+                isActive === false
+                  ? {
+                      opacity: "0",
+                      position: "absolute",
+                      top: "-10000000000px",
+                    }
+                  : { opacity: "1" }
+              }
+            >
+              Dear {confirmLoginPage}, you have logged in sucessfully
+            </p>
           </div>
-          <div className="blankUsernameinputstudentlogin">
+          <div
+            className="blankUsernameinputstudentlogin"
+            style={
+              isActive === false
+                ? { opacity: "0", position: "absolute", top: "-10000000000px" }
+                : { opacity: "1" }
+            }
+          >
             <div className="blankdivofgetotpbutton">
               <div id="blankOKButton" onClick={conditiononBlankOKbutton}>
                 OK
