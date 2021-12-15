@@ -30,8 +30,9 @@ function App() {
   // const handleclick = () => setclick(!click);
   return (
     <>
-      <Navbar />
+
       <Router>
+        <Navbar />
         <div className="body">
           <nav className="navbars">
             <ul>

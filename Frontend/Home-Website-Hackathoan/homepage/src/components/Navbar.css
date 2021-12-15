@@ -11,6 +11,10 @@
 .dropdown-menu{
     width: fit-content !important;
 }
+.nav-item{
+    color: aliceblue !important;
+    text-decoration: none !important;
+}
 .dropdown:hover .dropdown-menu{
     display: block;
     background-color: #212529;

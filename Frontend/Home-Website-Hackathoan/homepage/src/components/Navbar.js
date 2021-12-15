@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Navbar.css";
-
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
     return (
         <div>
@@ -10,28 +10,44 @@ const Navbar = () => {
                     <div class="collapse navbar-collapse">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                <NavLink to="/" exact>
+                                    Home
+                                </NavLink>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> Student Profile</a>
+                                <NavLink to="/studentprofile" exact>
+                                    Student Profile
+                                </NavLink>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> Events(TSG)</a>
+                                <NavLink to="/events" exact>
+                                    Events(TSG)
+                                </NavLink>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Society Point</a>
+                                <NavLink to="/societypoint" exact>
+                                    Society Point
+                                </NavLink>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> News Bulletin</a>
+                                <NavLink to="/newsbulletin" exact>
+                                    News Bulletin
+                                </NavLink>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Students' Point</a>
+                                <NavLink to="/studentspoint" exact>
+                                    Students' Point
+                                </NavLink>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> Quick Info</a>
+                                <NavLink to="/quickinfo" exact>
+                                    Quick Info
+                                </NavLink>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> Archives</a>
+                                <NavLink to="/archives" exact>
+                                    Archives
+                                </NavLink>
                             </li></ul>
                     </div>
                 </div>
@@ -43,22 +59,34 @@ const Navbar = () => {
                         <div class="navbar-expand" >
                             <ul className='navbar-nav ml-auto'>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    <NavLink to="/" exact>
+                                        Home
+                                    </NavLink>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"> Student Profile</a>
+                                    <NavLink to="/studentprofile" exact>
+                                        Student Profile
+                                    </NavLink>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"> Events(TSG)</a>
+                                    <NavLink to="/events" exact>
+                                        Events(TSG)
+                                    </NavLink>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Society Point</a>
+                                    <NavLink to="/societypoint" exact>
+                                        Society Point
+                                    </NavLink>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"> News Bulletin</a>
+                                    <NavLink to="/newsbulletin" exact>
+                                        News Bulletin
+                                    </NavLink>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Students' Point</a>
+                                    <NavLink to="/studentspoint" exact>
+                                        Students' Point
+                                    </NavLink>
                                 </li>
                             </ul>
                         </div>
@@ -72,9 +100,16 @@ const Navbar = () => {
                     <div class="collapse navbar-collapse" id="navbarNavDropdown1">
 
                         <ul class=" navbar-nav ml-auto">
-
-                            <li class="nav-item ml-auto"><a class="nav-link" href="#" >Quick Info</a></li>
-                            <li class="nav-item ml-auto"><a class="nav-link" href="#" >Archives</a></li>
+                            <li class="nav-item ml-auto">
+                                <NavLink to="/quickinfo" exact>
+                                    Quick Info
+                                </NavLink>
+                            </li>
+                            <li class="nav-item ml-auto">
+                                <NavLink to="/archives" exact>
+                                    Archives
+                                </NavLink>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -87,16 +122,24 @@ const Navbar = () => {
                         <div class="navbar-expand" >
                             <ul className='navbar-nav ml-auto'>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    <NavLink to="/" exact>
+                                        Home
+                                    </NavLink>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"> Student Profile</a>
+                                    <NavLink to="/studentprofile" exact>
+                                        Student Profile
+                                    </NavLink>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="#"> Events(TSG)</a>
+                                    <NavLink to="/events" exact>
+                                        Events(TSG)
+                                    </NavLink>
                                 </li>
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="#">Society Point</a>
+                                    <NavLink to="/societypoint" exact>
+                                        Society Point
+                                    </NavLink>
                                 </li>
 
                             </ul>
@@ -112,13 +155,23 @@ const Navbar = () => {
 
                         <ul class=" navbar-nav ml-auto">
                             <li class="nav-item  ml-auto">
-                                <a class="nav-link" href="#"> News Bulletin</a>
+                                <NavLink to="/newsbulletin" exact>
+                                    News Bulletin
+                                </NavLink>
                             </li>
                             <li class="nav-item  ml-auto">
-                                <a class="nav-link" href="#">Students' Point</a>
+                                <NavLink to="/studentspoint" exact>
+                                    Students' Point
+                                </NavLink>
                             </li>
-                            <li class="nav-item ml-auto"><a class="nav-link" href="#" >Quick Info</a></li>
-                            <li class="nav-item ml-auto"><a class="nav-link" href="#" >Archives</a></li>
+                            <li class="nav-item ml-auto">
+                                <NavLink to="/quickinfo" exact>
+                                    Quick Info
+                                </NavLink>
+                            </li>
+                            <NavLink to="/archives" exact>
+                                Archives
+                            </NavLink>
                         </ul>
                     </div>
                 </nav>
@@ -130,10 +183,14 @@ const Navbar = () => {
                         <div class="navbar-expand" >
                             <ul className='navbar-nav ml-auto'>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    <NavLink to="/" exact>
+                                        Home
+                                    </NavLink>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"> Student Profile</a>
+                                    <NavLink to="/studentprofile" exact>
+                                        Student Profile
+                                    </NavLink>
                                 </li>
                             </ul>
                         </div>
@@ -148,19 +205,33 @@ const Navbar = () => {
 
                         <ul class=" navbar-nav ml-auto">
                             <li class="nav-item ml-auto">
-                                <a class="nav-link" href="#"> Events(TSG)</a>
+                                <NavLink to="/events" exact>
+                                    Events(TSG)
+                                </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <a class="nav-link" href="#">Society Point</a>
+                                <NavLink to="/societypoint" exact>
+                                    Society Point
+                                </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <a class="nav-link" href="#"> News Bulletin</a>
+                                <NavLink to="/newsbulletin" exact>
+                                    News Bulletin
+                                </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <a class="nav-link" href="#">Students' Point</a>
+                                <NavLink to="/studentspoint" exact>
+                                    Students' Point
+                                </NavLink>
                             </li>
-                            <li class="nav-item ml-auto"><a class="nav-link" href="#" >Quick Info</a></li>
-                            <li class="nav-item ml-auto"><a class="nav-link" href="#" >Archives</a></li>
+                            <li class="nav-item ml-auto">
+                                <NavLink to="/quickinfo" exact>
+                                    Quick Info
+                                </NavLink>
+                            </li>
+                            <NavLink to="/archives" exact>
+                                Archives
+                            </NavLink>
                         </ul>
                     </div>
                 </nav>
@@ -182,25 +253,43 @@ const Navbar = () => {
 
                         <ul class=" navbar-nav ml-auto">
                             <li class="nav-item active ml-auto">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                <NavLink to="/" exact>
+                                    Home
+                                </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <a class="nav-link" href="#"> Student Profile</a>
+                                <NavLink to="/studentprofile" exact>
+                                    Student Profile
+                                </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <a class="nav-link" href="#"> Events(TSG)</a>
+                                <NavLink to="/events" exact>
+                                    Events(TSG)
+                                </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <a class="nav-link" href="#">Society Point</a>
+                                <NavLink to="/societypoint" exact>
+                                    Society Point
+                                </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <a class="nav-link" href="#"> News Bulletin</a>
+                                <NavLink to="/newsbulletin" exact>
+                                    News Bulletin
+                                </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <a class="nav-link" href="#">Students' Point</a>
+                                <NavLink to="/studentspoint" exact>
+                                    Students' Point
+                                </NavLink>
                             </li>
-                            <li class="nav-item ml-auto"><a class="nav-link" href="#" >Quick Info</a></li>
-                            <li class="nav-item ml-auto"><a class="nav-link" href="#" >Archives</a></li>
+                            <li class="nav-item ml-auto">
+                                <NavLink to="/quickinfo" exact>
+                                    Quick Info
+                                </NavLink>
+                            </li>
+                            <NavLink to="/archives" exact>
+                                Archives
+                            </NavLink>
                         </ul>
                     </div>
                 </nav>
