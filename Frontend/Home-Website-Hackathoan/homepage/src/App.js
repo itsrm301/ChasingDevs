@@ -16,6 +16,7 @@ import Studentlogin from "./components/Studentlogin";
 import Officiallogin from "./components/Officiallogin";
 import Otpverificationpage from "./components/Otpverificationpage";
 import Blanktextarea from "./components/Blanktextarea";
+import Navbar from "./components/Navbar";
 import {
   BrowserRouter as Router,
   Redirect,
@@ -29,6 +30,7 @@ function App() {
   // const handleclick = () => setclick(!click);
   return (
     <>
+      <Navbar />
       <Router>
         <div className="body">
           <nav className="navbars">
