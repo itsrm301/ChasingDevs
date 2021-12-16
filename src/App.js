@@ -16,6 +16,8 @@ import Studentlogin from "./components/Studentlogin";
 import Officiallogin from "./components/Officiallogin";
 import Otpverificationpage from "./components/Otpverificationpage";
 import Blanktextarea from "./components/Blanktextarea";
+import SocietyPage from "./components/SocietyPage";
+import BillReimbursementPortal from "./components/BillReimbursementPortal";
 // import Navbar from "./components/Navbar";
 import {
   BrowserRouter as Router,
@@ -602,6 +604,12 @@ function App() {
 
             <Route path="/Blanktextarea" exact>
               <Blanktextarea />
+            </Route>
+            <Route path="/SocietyPage" exact>
+              <SocietyPage />
+            </Route>
+            <Route path="/BillReimbursementPortal" exact>
+              <BillReimbursementPortal />
             </Route>
             <Route path="/" exact>
               <Home />

@@ -1,0 +1,28 @@
+.society_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.society_container input{
+    margin-top: 20px;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+.SocietyButtonBox button {
+    color: white;
+    margin: 12px;
+    font-size: 18px;
+}
+
+.society_box {
+    width: 300px;
+    height: 100px;
+    border: 1px dashed rgb(221, 158, 41);
+    background-color: black;
+}
