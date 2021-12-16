@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
     const style = {
-        color: "white", textDecoration: "none", marginRight: "15px",
+        color: "gray", textDecoration: "none", marginRight: "15px",
     }
     return (
         <div>
@@ -13,42 +13,42 @@ const Navbar = () => {
                     <div class="collapse navbar-collapse">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <NavLink style={style} to="/" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/" exact>
                                     Home
                                 </NavLink>
                             </li>
                             <li class="nav-item">
-                                <NavLink style={style} to="/studentprofile" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/studentprofile" exact>
                                     Student Profile
                                 </NavLink>
                             </li>
                             <li class="nav-item">
-                                <NavLink style={style} to="/events" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/events" exact>
                                     Events(TSG)
                                 </NavLink>
                             </li>
                             <li class="nav-item">
-                                <NavLink style={style} to="/societypoint" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/societypoint" exact>
                                     Society Point
                                 </NavLink>
                             </li>
                             <li class="nav-item">
-                                <NavLink style={style} to="/newsbulletin" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/newsbulletin" exact>
                                     News Bulletin
                                 </NavLink>
                             </li>
                             <li class="nav-item">
-                                <NavLink style={style} to="/studentspoint" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/studentspoint" exact>
                                     Students' Point
                                 </NavLink>
                             </li>
                             <li class="nav-item">
-                                <NavLink style={style} to="/quickinfo" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/quickinfo" exact>
                                     Quick Info
                                 </NavLink>
                             </li>
                             <li class="nav-item">
-                                <NavLink style={style} to="/archives" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/archives" exact>
                                     Archives
                                 </NavLink>
                             </li></ul>
@@ -62,32 +62,32 @@ const Navbar = () => {
                         <div class="navbar-expand" >
                             <ul className='navbar-nav ml-auto'>
                                 <li class="nav-item active">
-                                    <NavLink style={style} to="/" exact>
+                                    <NavLink activeStyle={{ color: "white" }} style={style} to="/" exact>
                                         Home
                                     </NavLink>
                                 </li>
                                 <li class="nav-item">
-                                    <NavLink style={style} to="/studentprofile" exact>
+                                    <NavLink activeStyle={{ color: "white" }} style={style} to="/studentprofile" exact>
                                         Student Profile
                                     </NavLink>
                                 </li>
                                 <li class="nav-item">
-                                    <NavLink style={style} to="/events" exact>
+                                    <NavLink activeStyle={{ color: "white" }} style={style} to="/events" exact>
                                         Events(TSG)
                                     </NavLink>
                                 </li>
                                 <li class="nav-item">
-                                    <NavLink style={style} to="/societypoint" exact>
+                                    <NavLink activeStyle={{ color: "white" }} style={style} to="/societypoint" exact>
                                         Society Point
                                     </NavLink>
                                 </li>
                                 <li class="nav-item">
-                                    <NavLink style={style} to="/newsbulletin" exact>
+                                    <NavLink activeStyle={{ color: "white" }} style={style} to="/newsbulletin" exact>
                                         News Bulletin
                                     </NavLink>
                                 </li>
                                 <li class="nav-item">
-                                    <NavLink style={style} to="/studentspoint" exact>
+                                    <NavLink activeStyle={{ color: "white" }} style={style} to="/studentspoint" exact>
                                         Students' Point
                                     </NavLink>
                                 </li>
@@ -104,12 +104,12 @@ const Navbar = () => {
 
                         <ul class=" navbar-nav ml-auto">
                             <li class="nav-item ml-auto">
-                                <NavLink style={style} to="/quickinfo" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/quickinfo" exact>
                                     Quick Info
                                 </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <NavLink style={style} to="/archives" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/archives" exact>
                                     Archives
                                 </NavLink>
                             </li>
@@ -125,22 +125,22 @@ const Navbar = () => {
                         <div class="navbar-expand" >
                             <ul className='navbar-nav ml-auto'>
                                 <li class="nav-item active">
-                                    <NavLink style={style} to="/" exact>
+                                    <NavLink activeStyle={{ color: "white" }} style={style} to="/" exact>
                                         Home
                                     </NavLink>
                                 </li>
                                 <li class="nav-item">
-                                    <NavLink style={style} to="/studentprofile" exact>
+                                    <NavLink activeStyle={{ color: "white" }} style={style} to="/studentprofile" exact>
                                         Student Profile
                                     </NavLink>
                                 </li>
                                 <li class="nav-item ">
-                                    <NavLink style={style} to="/events" exact>
+                                    <NavLink activeStyle={{ color: "white" }} style={style} to="/events" exact>
                                         Events(TSG)
                                     </NavLink>
                                 </li>
                                 <li class="nav-item ">
-                                    <NavLink style={style} to="/societypoint" exact>
+                                    <NavLink activeStyle={{ color: "white" }} style={style} to="/societypoint" exact>
                                         Society Point
                                     </NavLink>
                                 </li>
@@ -158,21 +158,21 @@ const Navbar = () => {
 
                         <ul class=" navbar-nav ml-auto">
                             <li class="nav-item  ml-auto">
-                                <NavLink style={style} to="/newsbulletin" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/newsbulletin" exact>
                                     News Bulletin
                                 </NavLink>
                             </li>
                             <li class="nav-item  ml-auto">
-                                <NavLink style={style} to="/studentspoint" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/studentspoint" exact>
                                     Students' Point
                                 </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <NavLink style={style} to="/quickinfo" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/quickinfo" exact>
                                     Quick Info
                                 </NavLink>
                             </li>
-                            <NavLink style={style} to="/archives" exact>
+                            <NavLink activeStyle={{ color: "white" }} style={style} to="/archives" exact>
                                 Archives
                             </NavLink>
                         </ul>
@@ -186,12 +186,12 @@ const Navbar = () => {
                         <div class="navbar-expand" >
                             <ul className='navbar-nav ml-auto'>
                                 <li class="nav-item active">
-                                    <NavLink style={style} to="/" exact>
+                                    <NavLink activeStyle={{ color: "white" }} style={style} to="/" exact>
                                         Home
                                     </NavLink>
                                 </li>
                                 <li class="nav-item">
-                                    <NavLink style={style} to="/studentprofile" exact>
+                                    <NavLink activeStyle={{ color: "white" }} style={style} to="/studentprofile" exact>
                                         Student Profile
                                     </NavLink>
                                 </li>
@@ -208,31 +208,31 @@ const Navbar = () => {
 
                         <ul class=" navbar-nav ml-auto">
                             <li class="nav-item ml-auto">
-                                <NavLink style={style} to="/events" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/events" exact>
                                     Events(TSG)
                                 </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <NavLink style={style} to="/societypoint" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/societypoint" exact>
                                     Society Point
                                 </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <NavLink style={style} to="/newsbulletin" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/newsbulletin" exact>
                                     News Bulletin
                                 </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <NavLink style={style} to="/studentspoint" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/studentspoint" exact>
                                     Students' Point
                                 </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <NavLink style={style} to="/quickinfo" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/quickinfo" exact>
                                     Quick Info
                                 </NavLink>
                             </li>
-                            <NavLink style={style} to="/archives" exact>
+                            <NavLink activeStyle={{ color: "white" }} style={style} to="/archives" exact>
                                 Archives
                             </NavLink>
                         </ul>
@@ -256,41 +256,41 @@ const Navbar = () => {
 
                         <ul class=" navbar-nav ml-auto">
                             <li class="nav-item active ml-auto">
-                                <NavLink style={style} to="/" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/" exact>
                                     Home
                                 </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <NavLink style={style} to="/studentprofile" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/studentprofile" exact>
                                     Student Profile
                                 </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <NavLink style={style} to="/events" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/events" exact>
                                     Events(TSG)
                                 </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <NavLink style={style} to="/societypoint" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/societypoint" exact>
                                     Society Point
                                 </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <NavLink style={style} to="/newsbulletin" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/newsbulletin" exact>
                                     News Bulletin
                                 </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <NavLink style={style} to="/studentspoint" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/studentspoint" exact>
                                     Students' Point
                                 </NavLink>
                             </li>
                             <li class="nav-item ml-auto">
-                                <NavLink style={style} to="/quickinfo" exact>
+                                <NavLink activeStyle={{ color: "white" }} style={style} to="/quickinfo" exact>
                                     Quick Info
                                 </NavLink>
                             </li>
-                            <NavLink style={style} to="/archives" exact>
+                            <NavLink activeStyle={{ color: "white" }} style={style} to="/archives" exact>
                                 Archives
                             </NavLink>
                         </ul>
