@@ -4,6 +4,11 @@ import "./Blanktextarea.css";
 import { useLocation, useHistory } from "react-router-dom";
 export default function Blanktextarea() {
   //   const navigate = useNavigate();
+  const [FirstNumber, setFirstNumber] = useState("10");
+  const [SecondNumber, setSecondNumber] = useState("3");
+  // let FirstNumber = Math.round(8 + (19 - 8) * Math.random());
+  // let SecondNumber = Math.round(0 + (7 - 0) * Math.random());
+  let ResultOftwoNumvber = FirstNumber - SecondNumber;
   const history = useHistory();
   const location = useLocation();
   const confirmLoginPage = location.state.whichLoginpage;
@@ -37,14 +42,20 @@ export default function Blanktextarea() {
   }
   function verifyHuman(e) {
     setverifyButtonisclick(true);
-    if (usernameAnswer !== "4") {
+
+    ResultOftwoNumvber = FirstNumber - SecondNumber;
+
+    if (usernameAnswer !== `${ResultOftwoNumvber}`) {
       setAMnotRobot("You are not a Human ?");
       e.target.value = "";
     } else {
       setIsActive(true);
       setIsActiveanswerq(true);
     }
+    setFirstNumber(Math.round(8 + (19 - 8) * Math.random()));
+    setSecondNumber(Math.round(0 + (7 - 0) * Math.random()));
   }
+
   return (
     <>
       {/* {console.log(location.state.name)} */}
@@ -82,7 +93,7 @@ export default function Blanktextarea() {
             >
               <h1
                 style={
-                  usernameAnswer !== "4" &&
+                  usernameAnswer !== `${ResultOftwoNumvber}` &&
                   usernameAnswer !== " " &&
                   verifyButtonisclick &&
                   usernameAnswer.length !== 0
@@ -97,9 +108,9 @@ export default function Blanktextarea() {
                 name="question"
                 id="Question"
                 autocomplete="off"
-                placeholder="What is 11 - 7 = ?"
+                placeholder={`What is ${FirstNumber} - ${SecondNumber} = ?`}
                 style={
-                  usernameAnswer !== "4" &&
+                  usernameAnswer !== `${ResultOftwoNumvber}` &&
                   usernameAnswer !== " " &&
                   verifyButtonisclick
                     ? {
