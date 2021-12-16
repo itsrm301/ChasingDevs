@@ -1,6 +1,7 @@
 .nav1050,.nav900,.nav650,.nav405{
     display: none;
 }
+
 .mainc{
     display: flex;
   justify-content: end;
@@ -8,9 +9,10 @@
     height: 30px;
     align-items: center;
 }
-.dropdown-menu{
-    width: fit-content !important;
+.nav-item:hover{
+    color: gray;
 }
+
 .nav-item{
     color: aliceblue !important;
     text-decoration: none !important;
