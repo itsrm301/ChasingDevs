@@ -1,11 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 // import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Studentspoint from "./components/Studentspoint";
-import Studentprofile from "./components/Studentprofile";
 import Societypoint from "./components/Societypoint";
 import Events from "./components/Events";
 import Newsbulletin from "./components/Newsbulletin";
@@ -24,8 +21,8 @@ import {
   Redirect,
   Switch,
   Route,
-  link,
 } from "react-router-dom";
+import StudentsProfile from "./components/StudentsProfile";
 
 function App() {
   const [click, setclick] = useState(true);
@@ -53,7 +50,7 @@ function App() {
                       </NavLink>
                     </li>
                     <li className="nav-item navitem navitem_top">
-                      <NavLink to="/studentprofile" exact>
+                      <NavLink to="/StudentsProfile" exact>
                         Student Profile
                       </NavLink>
                     </li>
@@ -87,6 +84,11 @@ function App() {
                         Archives
                       </NavLink>
                     </li>
+                    <li className="nav-item navitem navitem_top">
+                      <NavLink to="/profile" exact>
+                        Profile
+                      </NavLink>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -105,7 +107,7 @@ function App() {
                         </NavLink>
                       </li>
                       <li className="nav-item navitem navitem_top">
-                        <NavLink to="/studentprofile" exact>
+                        <NavLink to="/StudentsProfile" exact>
                           Student Profile
                         </NavLink>
                       </li>
@@ -206,7 +208,7 @@ function App() {
                         </NavLink>
                       </li>
                       <li className="nav-item navitem navitem_top">
-                        <NavLink to="/studentprofile" exact>
+                        <NavLink to="/StudentsProfile" exact>
                           Student Profile
                         </NavLink>
                       </li>
@@ -300,7 +302,7 @@ function App() {
                         </NavLink>
                       </li>
                       <li className="nav-item  navitem navitem_top">
-                        <NavLink to="/studentprofile" exact>
+                        <NavLink to="/StudentsProfile" exact>
                           Student Profile
                         </NavLink>
                       </li>
@@ -437,7 +439,7 @@ function App() {
                 >
                   <ul className=" navbar-nav ml-auto">
                     <li className="nav-item ml-auto  navitem navitem_top">
-                      <NavLink to="/studentprofile" exact>
+                      <NavLink to="/StudentsProfile" exact>
                         Student Profile
                       </NavLink>
                     </li>
@@ -527,7 +529,7 @@ function App() {
                       </NavLink>
                     </li>
                     <li className="nav-item ml-auto navitem navitem_top">
-                      <NavLink to="/studentprofile" exact>
+                      <NavLink to="/StudentsProfile" exact>
                         Student Profile
                       </NavLink>
                     </li>
@@ -567,9 +569,6 @@ function App() {
             </div>
           </div>
           <Switch>
-            <Route path="/Studentprofile" exact>
-              <Studentprofile />
-            </Route>
             <Route path="/Events" exact>
               <Events />
             </Route>
@@ -579,9 +578,7 @@ function App() {
             <Route path="/Newsbulletin" exact>
               <Newsbulletin />
             </Route>
-            <Route path="/Studentspoint" exact>
-              <Studentspoint />
-            </Route>
+
             <Route path="/Quickinfo" exact>
               <Quickinfo />
             </Route>
@@ -613,6 +610,9 @@ function App() {
             </Route>
             <Route path="/" exact>
               <Home />
+            </Route>
+            <Route path="/StudentsProfile" exact>
+              <StudentsProfile />
             </Route>
             <Redirect to="/" />
           </Switch>

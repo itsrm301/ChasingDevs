@@ -5,7 +5,6 @@ import { useState } from "react";
 
 import { Link, useHistory } from "react-router-dom";
 
-
 export default function Societypoint() {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -21,18 +20,24 @@ export default function Societypoint() {
         placeholder="Search ..."
         onChange={(event) => setSearchTerm(event.target.value)}
       />
-      
+
       {SOC_DATA.filter((val) => {
-        if(searchTerm==="") {
+        if (searchTerm === "") {
           return val;
-        }
-        else if(val.soc_name.toLowerCase().includes(searchTerm.toLowerCase())){
+        } else if (
+          val.soc_name.toLowerCase().includes(searchTerm.toLowerCase())
+        ) {
           return val;
         }
       }).map((val, key) => {
         return (
           <div className="SocietyButtonBox">
-            <button className="society_box" onClick={() => history.push("/SocietyPage")}>{val.soc_name}</button>
+            <button
+              className="society_box"
+              onClick={() => history.push("/SocietyPage")}
+            >
+              {val.soc_name}
+            </button>
           </div>
         );
       })}
