@@ -69,62 +69,54 @@ export default function Home() {
           </div>
         </div>
         <div className="RightHomeContainer">
-          <div
-            style={{
-              display: "block",
-              width: 700,
-              padding: 50,
-              paddingLeft: 100,
-              paddingRight: 0,
-            }}
-          >
-            <Carousel>
-              <Carousel.Item interval={3000}>
-                <img
-                  className="d-block w-100"
-                  src={process.env.PUBLIC_URL + "/image/crousel_b.jpg"}
-                  alt="Image One"
-                />
-                <div className="FooterRightHomeContainer">
-                  <Carousel.Caption>
-                    <h3 className="captionHeading">Stay together</h3>
-                    <p className="captionpara">Thank you for being with me</p>
-                  </Carousel.Caption>
-                </div>
-              </Carousel.Item>
+          {/* <div className="HomecarouselDiv"> */}
+          <Carousel>
+            <Carousel.Item interval={3000} className="HomeCarousel">
+              <img
+                className="d-block w-100"
+                src={process.env.PUBLIC_URL + "/image/crousel_b.jpg"}
+                alt="Image One"
+              />
+              <div className="FooterRightHomeContainer">
+                <Carousel.Caption>
+                  <h3 className="captionHeading">Stay together</h3>
+                  <p className="captionpara">Thank you for being with me</p>
+                </Carousel.Caption>
+              </div>
+            </Carousel.Item>
 
-              <Carousel.Item interval={3000}>
-                <img
-                  className="d-block w-100"
-                  src={process.env.PUBLIC_URL + "/image/crousel_d.jpg"}
-                  alt="Image Two"
-                />
-                <div className="FooterRightHomeContainer">
-                  {" "}
-                  <Carousel.Caption>
-                    <h3 className="captionHeading">Cheers</h3>
-                    <p className="captionpara">
-                      We all are looking good together
-                    </p>
-                  </Carousel.Caption>
-                </div>
-              </Carousel.Item>
-              <Carousel.Item interval={3000}>
-                <img
-                  className="d-block w-100"
-                  src={process.env.PUBLIC_URL + "/image/crousel_e.jpg"}
-                  alt="Image Two"
-                />
-                <div className="FooterRightHomeContainer">
-                  {" "}
-                  <Carousel.Caption>
-                    <h3 className="captionHeading">Happy Diwali</h3>
-                    <p className="captionpara">I'm missing my home's Diwali</p>
-                  </Carousel.Caption>
-                </div>
-              </Carousel.Item>
-            </Carousel>
-          </div>
+            <Carousel.Item interval={3000} className="HomeCarousel">
+              <img
+                className="d-block w-100"
+                src={process.env.PUBLIC_URL + "/image/crousel_d.jpg"}
+                alt="Image Two"
+              />
+              <div className="FooterRightHomeContainer">
+                {" "}
+                <Carousel.Caption>
+                  <h3 className="captionHeading">Cheers</h3>
+                  <p className="captionpara">
+                    We all are looking good together
+                  </p>
+                </Carousel.Caption>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item interval={3000} className="HomeCarousel">
+              <img
+                className="d-block w-100 "
+                src={process.env.PUBLIC_URL + "/image/crousel_e.jpg"}
+                alt="Image Two"
+              />
+              <div className="FooterRightHomeContainer">
+                {" "}
+                <Carousel.Caption>
+                  <h3 className="captionHeading">Happy Diwali</h3>
+                  <p className="captionpara">I'm missing my home's Diwali</p>
+                </Carousel.Caption>
+              </div>
+            </Carousel.Item>
+          </Carousel>
+          {/* </div> */}
         </div>
       </div>
     </>
