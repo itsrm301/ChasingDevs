@@ -23,7 +23,7 @@ export default function Studentlogin() {
       setIsActive(true);
     } else {
       loginotp(usernameEmail).then(res=>
-        {console.log(res.OTP,res.mail);
+        {
           history.push("/Otpverificationpage", { nameofEmail: res.mail,otp:res.OTP });
         }
         ).catch(e=>console.log(e));
