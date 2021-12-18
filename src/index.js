@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+require("dotenv").config();
+const express =require("express");
+const mongoose= require("mongoose");
+const userRoutes =require("../routes/userroutes");
+const app= express();
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const conndb=async()=>{ return await mongoose.connect(process.env.URI);}
+conndb().then(()=>{console.log("mongDb connected");}).catch(err=>console.log(err));
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+
+app.use("/api/user",userRoutes);
+
+
+const port=process.env.PORT||3000;
+app.listen(port,()=>{console.log(`listenning on port ${port}`)});
