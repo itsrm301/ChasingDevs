@@ -9,6 +9,19 @@ const SFGSchema=new mongoose.Schema({
     name:{
         type:String,
         required:true
+    },
+    queryRaised:{
+        type:String,
+        required:true
+
+    },
+    status:{
+        type:String,
+        enum:['pending','process','resolved','rejected'],
+        required:true
+    },
+    response:{
+        type:String
     }
 });
 
