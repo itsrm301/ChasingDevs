@@ -3,6 +3,7 @@ import "./Studentlogin.css";
 
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import loginotp from "./loginotp";
 export default function Studentlogin() {
   const [usernameEmail, setusernameEmail] = useState(" ");
   const [isActive, setIsActive] = useState(false);
@@ -21,7 +22,13 @@ export default function Studentlogin() {
     } else if (usernameEmail.length === 0) {
       setIsActive(true);
     } else {
-      history.push("/Otpverificationpage", { nameofEmail: `${usernameEmail}` });
+      loginotp(usernameEmail).then(res=>
+        {console.log(res.OTP,res.mail);
+          history.push("/Otpverificationpage", { nameofEmail: res.mail,otp:res.OTP });
+        }
+        ).catch(e=>console.log(e));
+     
+      
     }
   }
   function shouldBlur(e) {
