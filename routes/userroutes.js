@@ -8,12 +8,17 @@ router.get("/",(req,res)=>{
 });
 
 router.post("/login",(req,res)=>{
-    const user=getrow(req.body.email);
-    console.log(user);
-    if(user!==null){
-        console.log(user);
-        res.send(user);
+getrow(req.body.email).then((user)=>{
+if(user!==null)
+{
+    res.send({name:user.name,roll:user.Roll})
+    }else{
+        res.send("User not exist");
     }
+}).catch(e=>console.log(e));
+
+ console.log(!null);
+    
 })
 
 module.exports =router;

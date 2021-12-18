@@ -2,7 +2,7 @@ const {GoogleSpreadsheet} = require("google-spreadsheet");
 const fs =require("fs");
 const EXCEL_SHEET_ID="1o8Fe2ZX_YSeOvT6yg4uo2EE9O-oVQ6FNieaHPVMJn5w";
 const doc = new GoogleSpreadsheet(EXCEL_SHEET_ID);
-const CREDENTIAL = JSON.parse(fs.readFileSync('googlesheetcredentials.json'));
+const CREDENTIAL = JSON.parse(fs.readFileSync(__dirname+'/googlesheetcredentials.json'));
 
 const getRow=async (email)=>{
     await doc.useServiceAccountAuth({
@@ -19,6 +19,7 @@ const getRow=async (email)=>{
     for( index=0;index<rows.length;index++){
         const row = rows[index];
         if(row.email==email){
+             
             return row;
             }
 
@@ -28,6 +29,6 @@ const getRow=async (email)=>{
     }
 
 }
-// getRow('pqr@iitkgp.ac.in');
+ 
 
 module.exports= getRow;
