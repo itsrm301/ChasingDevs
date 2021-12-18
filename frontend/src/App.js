@@ -27,6 +27,9 @@ import StudentsProfile from "./components/StudentsProfile";
 function App() {
   const [click, setclick] = useState(true);
   const handleclick = () => setclick(!click);
+  function IamClickingLinktwo() {
+    window.open("https://www.instagram.com/aryanroy.tony?r=nametag");
+  }
   return (
     <>
       <Router>
@@ -74,7 +77,7 @@ function App() {
                         Students' Point
                       </NavLink>
                     </li>
-                    <li className="nav-item navitem navitem_top">
+                    <li className="nav-item navitem navitem_top ">
                       <NavLink to="/quickinfo" exact>
                         Quick Info
                       </NavLink>

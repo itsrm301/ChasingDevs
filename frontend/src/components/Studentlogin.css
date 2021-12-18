@@ -11,7 +11,7 @@
   background-color: black;
 }
 .centerstudentlogincontainer {
-  /* border: 1px solid red; */
+  /* border: 1px solid rgb(15, 228, 44); */
   padding: 20px;
   border-radius: 10px;
   box-shadow: -1px 0px 8px 0px grey;
@@ -33,6 +33,7 @@ input {
   border-radius: 20px;
   object-position: 0 -157px;
   object-fit: cover;
+  /* border: 1px solid red; */
 }
 .belowstudentlogintopimage {
   /* border: 1px solid yellow; */
@@ -56,7 +57,7 @@ input {
 }
 .Usernameinputstudentlogin {
   /* border: 1px solid purple; */
-  /* width: 100%; */
+  width: 100%;
   padding: 10px;
   display: flex;
   /* flex-direction: column; */
@@ -114,7 +115,107 @@ input {
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  right: 81px;
+  right: 73px;
   top: -12px;
   font-size: 13px;
+}
+@media only screen and (min-width: 0px) and (max-width: 990px) {
+  .centerstudentlogincontainer {
+    margin-top: -59px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 613px) {
+  .centerstudentlogincontainer {
+    width: 500px;
+    /* height: 1000px; */
+  }
+  .email_logo {
+    left: 144px;
+    top: 18.5px;
+  }
+  .belowstudentlogintopimage p {
+    line-height: 20px;
+  }
+  .blankerror {
+    right: 39px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 510px) {
+  .centerstudentlogincontainer {
+    width: 400px;
+    padding-top: 5px;
+    /* height: 1000px; */
+  }
+  .studentlogintopimage img {
+    width: 400px;
+    height: 223px;
+    object-position: 0 -114px;
+    /* padding-top: 10px; */
+  }
+  .Usernameinputstudentlogin {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  .email_logo {
+    left: 43px;
+    top: 48.5px;
+  }
+  .divofgetotpbutton {
+    margin-top: 11px;
+  }
+  .blankerror {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 410px) {
+  .centerstudentlogincontainer {
+    width: 350px;
+    /* height: 1000px; */
+  }
+  .studentlogintopimage img {
+    width: 350px;
+    height: 250px;
+    object-position: 0 -56px;
+  }
+  .email_logo {
+    left: 19px;
+  }
+  .blankerror {
+    right: 13px;
+    font-size: 11px;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 356px) {
+  .centerstudentlogincontainer {
+    width: 340px;
+  }
+  .studentlogintopimage img {
+    width: 330px;
+    height: 250px;
+    object-position: 0 -32px;
+  }
+  .email_logo {
+    left: 13px;
+  }
+  .blankerror {
+    right: 8px;
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 356px) {
+  .centerstudentlogincontainer {
+    width: 315px;
+  }
+  .studentlogintopimage img {
+    width: 315px;
+    height: 260px;
+    object-position: 0 -32px;
+  }
+  .email_logo {
+    left: 3px;
+  }
+  .blankerror {
+    right: 0px;
+  }
 }
