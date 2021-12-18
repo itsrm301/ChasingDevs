@@ -10,14 +10,14 @@
   margin-top: 20px;
 }
 .otpcenterstudentlogincontainer {
-  /* border: 1px solid red; */
+  /* border: 1px solid rgb(179, 192, 0); */
   padding: 20px;
   border-radius: 10px;
   box-shadow: -1px 0px 8px 0px grey;
-  /* width: 527.03px; */
+  width: 535px;
 }
 .otpstudentlogintopimage {
-  /* border: 1px solid tan; */
+  border: 1px solid tan;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -60,7 +60,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 490px;
+  /* width: 490px; */
 }
 .otpUsernameinputstudentlogin h5 {
   margin-right: 15px;
@@ -101,7 +101,7 @@
 .otplock_logo {
   position: absolute;
   top: 19px;
-  left: 161px;
+  left: 163px;
   color: rgb(117 106 125);
 }
 .otpusercredential {
@@ -160,6 +160,7 @@
   color: #a9967d;
   padding-top: 4px;
   padding-bottom: 4px;
+  /* border: 1px solid yellow; */
 }
 #userinsidenamingverification {
   margin-right: 10px;
@@ -168,11 +169,12 @@
   margin-left: 10px;
 }
 .otpparaaboveenterOTP {
-  width: 523px;
+  /* width: 523px; */
   /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .otpparaaboveenterOTP p {
   font-family: "Padauk", sans-serif;
@@ -212,7 +214,120 @@
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  right: 81px;
+  right: 53px;
   top: -12px;
   font-size: 13px;
+}
+@media only screen and (min-width: 0px) and (max-width: 990px) {
+  .otpcenterstudentlogincontainer {
+    margin-top: -59px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 613px) {
+  .otpcenterstudentlogincontainer {
+    width: 500px;
+    /* height: 1000px; */
+  }
+  .otplock_logo {
+    left: 144px;
+    top: 18.5px;
+  }
+  .otpbelowstudentlogintopimage p {
+    line-height: 20px;
+  }
+  .otpblankerror {
+    right: 39px;
+  }
+  .otptimer {
+    right: 43px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 510px) {
+  .otpcenterstudentlogincontainer {
+    width: 400px;
+    padding-top: 5px;
+    /* height: 1000px; */
+  }
+  .otpstudentlogintopimage img {
+    width: 400px;
+    height: 223px;
+    object-position: 0 -114px;
+    /* padding-top: 10px; */
+  }
+  .otpUsernameinputstudentlogin {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  .otplock_logo {
+    left: 43px;
+    top: 48.5px;
+  }
+  .otpdivofgetotpbutton {
+    margin-top: 11px;
+  }
+  .otpblankerror {
+    font-size: 12px;
+  }
+  .otptimer {
+    right: 45px;
+    bottom: 11px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 410px) {
+  .otpcenterstudentlogincontainer {
+    width: 350px;
+    /* height: 1000px; */
+  }
+  .otpstudentlogintopimage img {
+    width: 350px;
+    height: 250px;
+    object-position: 0 -56px;
+  }
+  .otplock_logo {
+    left: 19px;
+  }
+  .otpblankerror {
+    right: 13px;
+    font-size: 11px;
+  }
+  .otptimer {
+    right: 20px;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 356px) {
+  .otpcenterstudentlogincontainer {
+    width: 340px;
+  }
+  .otpstudentlogintopimage img {
+    width: 330px;
+    height: 250px;
+    object-position: 0 -32px;
+  }
+  .otplock_logo {
+    left: 13px;
+  }
+  .otpblankerror {
+    right: 8px;
+    font-size: 10px;
+  }
+  .otptimer {
+    right: 3px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 356px) {
+  .otpcenterstudentlogincontainer {
+    width: 315px;
+  }
+  .otpstudentlogintopimage img {
+    width: 315px;
+    height: 260px;
+    object-position: 0 -32px;
+  }
+  .otplock_logo {
+    left: 3px;
+  }
+  .otpblankerror {
+    right: 0px;
+  }
 }

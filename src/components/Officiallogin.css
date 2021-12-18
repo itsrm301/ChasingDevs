@@ -1,0 +1,245 @@
+.officialstudentlogincontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* border: 1px solid red; */
+  /* width: 100%; */
+  height: 100%;
+  margin-top: 20px;
+  background: black;
+}
+.officialcenterstudentlogincontainer {
+  /* border: 1px solid rgb(0, 255, 21); */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: -1px 0px 8px 0px grey;
+  background: black;
+}
+.officialstudentlogintopimage {
+  /* border: 1px solid tan; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.officialstudentlogintopimage img {
+  width: 400px;
+  height: 189px;
+  border-radius: 20px;
+  /* object-position: 0 -1px; */
+  object-fit: cover;
+  /* border: 1px solid skyblue; */
+}
+.officialbelowstudentlogintopimage {
+  /* border: 1px solid yellow; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 47px;
+}
+.officialbelowstudentlogintopimage h1 {
+  font-family: "ZCOOL XiaoWei", serif;
+  font-size: 25px;
+  color: #9f9b67;
+}
+
+.officialbelowstudentlogintopimage p {
+  font-family: "Padauk", sans-serif;
+
+  color: #a9967d;
+}
+.officialUsernameinputstudentlogin {
+  /* border: 1px solid purple; */
+  /* width: 100%; */
+  padding: 10px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.officialUsernameinputstudentlogin h5 {
+  margin-right: 15px;
+  font-family: "ZCOOL XiaoWei", serif;
+  /* font-size: 25px; */
+  color: #9f9b67;
+}
+.officialUsernameinputstudentlogin input {
+  width: 280px;
+  padding-left: 26px;
+}
+.officialdivofgetotpbutton {
+  width: 100%;
+  /* border: 1px solid tomato; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#officialLoginButton {
+  padding: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px dashed;
+  /* background-color: #c4c4c4; */
+  color: #93a8b2;
+  background-color: black;
+  cursor: pointer;
+
+  font-size: 12px;
+  /* color: black; */
+  text-decoration: none;
+}
+#officialLoginButton:hover {
+  color: rgb(221, 158, 41);
+  background-color: black;
+}
+.officialpassword_logo {
+  position: absolute;
+  top: 8px;
+  left: 141px;
+  color: rgb(103 88 113);
+}
+.officialusername_logo {
+  position: absolute;
+  top: 19px;
+  left: 141px;
+  color: rgb(103 88 113);
+}
+.officialerrorpositionrelative {
+  position: relative;
+}
+.officialblankerror {
+  color: red;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 36px;
+  top: -13px;
+  font-size: 13px;
+  height: 100%;
+}
+#passwordmargintop {
+  margin-top: 3px;
+  padding-top: 0;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 990px) {
+  .officialcenterstudentlogincontainer {
+    margin-top: -59px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 613px) {
+  .officialcenterstudentlogincontainer {
+    width: 500px;
+    /* height: 1000px; */
+  }
+
+  .officialbelowstudentlogintopimage p {
+    line-height: 20px;
+  }
+
+  .officialcenterstudentlogincontainer {
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 510px) {
+  .officialcenterstudentlogincontainer {
+    width: 400px;
+    padding-top: 5px;
+    /* height: 1000px; */
+  }
+  .officialstudentlogintopimage img {
+    width: 400px;
+    height: 223px;
+    object-position: 0 -12px;
+    /* padding-top: 10px; */
+  }
+  .officialUsernameinputstudentlogin {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  .officialdivofgetotpbutton {
+    margin-top: 11px;
+  }
+  .officialblankerror {
+    font-size: 12px;
+  }
+  .officialusername_logo {
+    position: absolute;
+    top: 48.5px;
+    left: 43px;
+  }
+  .officialpassword_logo {
+    position: absolute;
+    top: 37.5px;
+    left: 43px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 410px) {
+  .officialcenterstudentlogincontainer {
+    width: 350px;
+    /* height: 1000px; */
+  }
+  .officialstudentlogintopimage img {
+    width: 350px;
+    height: 250px;
+    object-position: -16px 8px;
+  }
+
+  .officialblankerror {
+    right: 13px;
+    font-size: 11px;
+  }
+  .officialcenterstudentlogincontainer {
+    margin-top: 10px;
+  }
+  .officialusername_logo {
+    left: 19px;
+  }
+  .officialpassword_logo {
+    left: 19px;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 356px) {
+  .officialcenterstudentlogincontainer {
+    width: 340px;
+  }
+  .officialstudentlogintopimage img {
+    width: 330px;
+    height: 250px;
+    object-position: -41px 2px;
+  }
+
+  .officialblankerror {
+    right: 8px;
+    font-size: 10px;
+  }
+  .officialusername_logo {
+    left: 0;
+  }
+  .officialpassword_logo {
+    left: 1px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 356px) {
+  .officialcenterstudentlogincontainer {
+    width: 315px;
+  }
+  .officialstudentlogintopimage img {
+    width: 315px;
+    height: 260px;
+    object-position: -39px 1px;
+  }
+
+  .officialblankerror {
+    right: 0px;
+  }
+}

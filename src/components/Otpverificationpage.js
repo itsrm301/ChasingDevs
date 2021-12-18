@@ -15,7 +15,7 @@ export default function Otpverificationpage() {
   };
   const [remainingSecs, setRemainingSecs] = useState(10);
   const [againotpreminder, setagainotpreminde] = useState(
-    `we’ve sent a verification code to your email -${enteredEmailadress}`
+    `we’ve sent a verification code to your email: ${enteredEmailadress}`
   );
   const [isActive, setIsActive] = useState(false);
   const { mins, secs } = getRemaining(remainingSecs);
@@ -47,7 +47,9 @@ export default function Otpverificationpage() {
   }
   function reset() {
     setRemainingSecs(10);
-    setagainotpreminde("Again a verification code is sent to your email.");
+    setagainotpreminde(
+      `Again a verification code is sent to your email: ${enteredEmailadress}`
+    );
     // console.log("a");
     // setIsActive(false);
   }

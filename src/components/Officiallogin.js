@@ -56,8 +56,7 @@ export default function Studentlogin() {
           <div className="officialbelowstudentlogintopimage">
             <h1>Officials’ Login</h1>
             <p>
-              To keep conacted with us please login with your personal
-              information by email
+              To keep conacted with us please login with your email & password
             </p>
           </div>
           <div className="officialUsernameinputstudentlogin">
@@ -123,7 +122,7 @@ export default function Studentlogin() {
 
           <div className="officialdivofgetotpbutton">
             <div
-              id="GetOTPButton"
+              id="officialLoginButton"
               title="click here to go to official Login page."
               onClick={conditiononOfficialLoginbutton}
             >
