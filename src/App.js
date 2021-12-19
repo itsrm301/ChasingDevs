@@ -24,6 +24,9 @@ import {
   Route,
   link,
 } from "react-router-dom";
+import OfficeBearers from "./components/OfficeBearers";
+import OfficeStaffs from "./components/OfficeStaffs";
+import Secrataries from "./components/Secrataries";
 
 function App() {
   const [click, setclick] = useState(true);
@@ -133,7 +136,7 @@ function App() {
                     className="btn"
                     style={
                       ({ border: "1px solid red" },
-                      click ? { top: "30px" } : { top: "150px" })
+                        click ? { top: "30px" } : { top: "150px" })
                     }
                   >
                     <button
@@ -151,17 +154,17 @@ function App() {
                         style={
                           click
                             ? {
-                                position: "absolute",
-                                top: "-10px",
-                                color: "white",
-                              }
+                              position: "absolute",
+                              top: "-10px",
+                              color: "white",
+                            }
                             : {
-                                position: "absolute",
-                                top: "-1px",
+                              position: "absolute",
+                              top: "-1px",
 
-                                fontSize: "25px",
-                                color: "red",
-                              }
+                              fontSize: "25px",
+                              color: "red",
+                            }
                         }
                       >
                         {click ? "..." : "×"}
@@ -236,17 +239,17 @@ function App() {
                         style={
                           click
                             ? {
-                                position: "absolute",
-                                top: "-10px",
-                                color: "white",
-                              }
+                              position: "absolute",
+                              top: "-10px",
+                              color: "white",
+                            }
                             : {
-                                position: "absolute",
-                                top: "-1px",
+                              position: "absolute",
+                              top: "-1px",
 
-                                fontSize: "25px",
-                                color: "red",
-                              }
+                              fontSize: "25px",
+                              color: "red",
+                            }
                         }
                       >
                         {click ? "..." : "×"}
@@ -320,17 +323,17 @@ function App() {
                         style={
                           click
                             ? {
-                                position: "absolute",
-                                top: "-10px",
-                                color: "white",
-                              }
+                              position: "absolute",
+                              top: "-10px",
+                              color: "white",
+                            }
                             : {
-                                position: "absolute",
-                                top: "-1px",
+                              position: "absolute",
+                              top: "-1px",
 
-                                fontSize: "25px",
-                                color: "red",
-                              }
+                              fontSize: "25px",
+                              color: "red",
+                            }
                         }
                       >
                         {click ? "..." : "×"}
@@ -410,17 +413,17 @@ function App() {
                         style={
                           click
                             ? {
-                                position: "absolute",
-                                top: "-10px",
-                                color: "white",
-                              }
+                              position: "absolute",
+                              top: "-10px",
+                              color: "white",
+                            }
                             : {
-                                position: "absolute",
-                                top: "-1px",
+                              position: "absolute",
+                              top: "-1px",
 
-                                fontSize: "25px",
-                                color: "red",
-                              }
+                              fontSize: "25px",
+                              color: "red",
+                            }
                         }
                       >
                         {click ? "..." : "×"}
@@ -495,17 +498,17 @@ function App() {
                         style={
                           click
                             ? {
-                                position: "absolute",
-                                top: "-10px",
-                                color: "white",
-                              }
+                              position: "absolute",
+                              top: "-10px",
+                              color: "white",
+                            }
                             : {
-                                position: "absolute",
-                                top: "-1px",
+                              position: "absolute",
+                              top: "-1px",
 
-                                fontSize: "25px",
-                                color: "red",
-                              }
+                              fontSize: "25px",
+                              color: "red",
+                            }
                         }
                       >
                         {click ? "..." : "×"}
@@ -582,6 +585,15 @@ function App() {
             </Route>
             <Route path="/Quickinfo" exact>
               <Quickinfo />
+            </Route>
+            <Route path="/Quickinfo/OfficeBearers" exact>
+              <OfficeBearers />
+            </Route>
+            <Route path="/Quickinfo/OfficeStaffs" exact>
+              <OfficeStaffs />
+            </Route>
+            <Route path="/Quickinfo/Secretaries" exact>
+              <Secrataries />
             </Route>
             <Route path="/Archives" exact>
               <Archives />
