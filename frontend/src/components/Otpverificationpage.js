@@ -8,6 +8,7 @@ export default function Otpverificationpage() {
   const history = useHistory();
   const location = useLocation();
   const enteredEmailadress = location.state.nameofEmail;
+  const actualotp=location.state.otp;
   const getRemaining = (time) => {
     const mins = Math.floor(time / 60);
     const secs = time - mins * 60;
@@ -27,22 +28,17 @@ export default function Otpverificationpage() {
     setIsActive(false);
   }
   function conditionLoginbutton() {
-    // if (userOtp === null) {
-    //   navigate({
-    //     pathname: "/Blanktextarea",
-    //     state: [{ name: "Otpverificationpage" }],
-    //   });
-    // } else {
-
-    // }
+ console.log(userOtp,actualotp);
     if (userOtp === " ") {
       setIsActive(true);
     } else if (userOtp.length === 0) {
       setIsActive(true);
-    } else {
-      history.push("/Blanktextarea", {
+    } else if(actualotp==userOtp){
+        history.push("/Blanktextarea", {
         whichLoginpage: "student",
       });
+    }else{
+      console.log("hey hey budhhu banaya");
     }
   }
   function reset() {
@@ -115,7 +111,7 @@ export default function Otpverificationpage() {
               Resend
             </div>
             <input
-              type="text"
+              type="number"
               name="email"
               id="EMAIL"
               autocomplete="off"
