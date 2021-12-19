@@ -8,7 +8,7 @@ export default function Otpverificationpage() {
   const history = useHistory();
   const location = useLocation();
   const enteredEmailadress = location.state.nameofEmail;
-  const actualotp=location.state.otp;
+  const actualotp = location.state.otp;
   const getRemaining = (time) => {
     const mins = Math.floor(time / 60);
     const secs = time - mins * 60;
@@ -28,16 +28,16 @@ export default function Otpverificationpage() {
     setIsActive(false);
   }
   function conditionLoginbutton() {
- console.log(userOtp,actualotp);
+    console.log(userOtp, actualotp);
     if (userOtp === " ") {
       setIsActive(true);
     } else if (userOtp.length === 0) {
       setIsActive(true);
-    } else if(actualotp==userOtp){
-        history.push("/Blanktextarea", {
+    } else if (actualotp == userOtp) {
+      history.push("/Blanktextarea", {
         whichLoginpage: "student",
       });
-    }else{
+    } else {
       console.log("hey hey budhhu banaya");
     }
   }

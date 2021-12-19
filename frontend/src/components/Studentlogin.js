@@ -1,12 +1,13 @@
 import React from "react";
 import "./Studentlogin.css";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import loginotp from "./loginotp";
 export default function Studentlogin() {
   const [usernameEmail, setusernameEmail] = useState(" ");
   const [isActive, setIsActive] = useState(false);
+  const [a, seta] = useState("1");
 
   const history = useHistory();
   function setinputusername(e) {
@@ -22,13 +23,8 @@ export default function Studentlogin() {
     } else if (usernameEmail.length === 0) {
       setIsActive(true);
     } else {
-      loginotp(usernameEmail).then(res=>
-        {
-          history.push("/Otpverificationpage", { nameofEmail: res.mail,otp:res.OTP });
-        }
-        ).catch(e=>console.log(e));
-     
-      
+      seta(a + 1);
+      history.push("/Otpverificationpage");
     }
   }
   function shouldBlur(e) {
@@ -37,6 +33,14 @@ export default function Studentlogin() {
   function shouldFocus(e) {
     e.target.focus();
   }
+  useEffect(() => {
+    console.log("ggg");
+    // loginotp(usernameEmail)
+    //   .then((res) => {
+    //     history.push({ nameofEmail: res.mail, otp: res.OTP });
+    //   })
+    //   .catch((e) => console.log(e));
+  }, [a]);
 
   return (
     <>
