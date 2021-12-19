@@ -2,13 +2,14 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import "./Otpverificationpage.css";
-
+import loginotp from "./loginotp";
 export default function Otpverificationpage() {
   const formatNumber = (number) => `0${number}`.slice(-2);
   const history = useHistory();
   const location = useLocation();
-  const enteredEmailadress = location.state.nameofEmail;
-  const actualotp=location.state.otp;
+  const enteredEmailaddress= location.state.nameofEmail;
+  const [actualotp,setActualotp]=useState("");
+  const [errors,setErrors]=useState("");
   const getRemaining = (time) => {
     const mins = Math.floor(time / 60);
     const secs = time - mins * 60;
@@ -16,7 +17,7 @@ export default function Otpverificationpage() {
   };
   const [remainingSecs, setRemainingSecs] = useState(10);
   const [againotpreminder, setagainotpreminde] = useState(
-    `we’ve sent a verification code to your email: ${enteredEmailadress}`
+    `we’ve sent a verification code to your email: ${enteredEmailaddress}`
   );
   const [isActive, setIsActive] = useState(false);
   const { mins, secs } = getRemaining(remainingSecs);
@@ -27,29 +28,36 @@ export default function Otpverificationpage() {
     setuserOtp(e.target.value);
     setIsActive(false);
   }
+  function otpverification(){
+   
+    loginotp(enteredEmailaddress).then(res=>{
+      setActualotp(res.OTP);
+    }).catch(e=>console.log(e));
+  }
   function conditionLoginbutton() {
- console.log(userOtp,actualotp);
-    if (userOtp === " ") {
-      setIsActive(true);
-    } else if (userOtp.length === 0) {
-      setIsActive(true);
+    if (userOtp === "") {
+      setErrors("Enter the OTP!");
     } else if(actualotp==userOtp){
         history.push("/Blanktextarea", {
         whichLoginpage: "student",
       });
     }else{
-      console.log("hey hey budhhu banaya");
+      setErrors("Wrong Otp!,try again");
     }
   }
+
+
   function reset() {
     setRemainingSecs(10);
     setagainotpreminde(
-      `Again a verification code is sent to your email: ${enteredEmailadress}`
+      `Again a verification code is sent to your email: ${enteredEmailaddress}`
     );
+    otpverification();
     // console.log("a");
     // setIsActive(false);
   }
 
+  useEffect(()=>otpverification(),[]);
   useEffect(() => {
     let interval = null;
     if (remainingSecs !== 0) {
@@ -61,6 +69,7 @@ export default function Otpverificationpage() {
     }
     return () => clearInterval(interval);
   }, [remainingSecs]);
+
   function shouldBlur(e) {
     e.target.blur();
   }
@@ -102,6 +111,7 @@ export default function Otpverificationpage() {
             <div className={secs !== "00" ? "otptimer" : "OtpOpacityZero"}>
               {time}
             </div>
+           
             <div
               className={
                 secs === "00" ? "otptimer resendhover" : "OtpOpacityZeroresend"
@@ -111,10 +121,10 @@ export default function Otpverificationpage() {
               Resend
             </div>
             <input
-              type="number"
+              type="text"
               name="email"
               id="EMAIL"
-              autocomplete="off"
+              autoComplete="off"
               placeholder="One time password = ?"
               style={{ color: "white", border: "1px dashed rgb(221, 158, 41)" }}
               onChange={setuserOtpfun}
@@ -125,9 +135,7 @@ export default function Otpverificationpage() {
           <div className="otperrorpositionrelative">
             <div
               className="otpblankerror"
-              style={isActive === true ? { opacity: "1" } : { opacity: "0" }}
-            >
-              Fill the text area !
+            >{errors}
             </div>
           </div>
           <div className="otpdivofgetotpbutton">

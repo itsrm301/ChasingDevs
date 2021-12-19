@@ -14,20 +14,13 @@ export default function Studentlogin() {
     setIsActive(false);
   }
   function conditiononGetOTPbutton() {
-    // if (usernameEmail === null) {
-    //   navigate("/Blanktextarea", { state: { name: "studentloginpage" } });
-    // } else {
     if (usernameEmail === " ") {
       setIsActive(true);
     } else if (usernameEmail.length === 0) {
       setIsActive(true);
     } else {
-      loginotp(usernameEmail).then(res=>
-        {
-          history.push("/Otpverificationpage", { nameofEmail: res.mail,otp:res.OTP });
-        }
-        ).catch(e=>console.log(e));
-     
+
+          if(usernameEmail) history.push("/Otpverificationpage", { nameofEmail: usernameEmail});
       
     }
   }
@@ -62,7 +55,7 @@ export default function Studentlogin() {
               type="text"
               name="email"
               id="EMAIL"
-              autocomplete="off"
+              autoComplete="off"
               placeholder="Type your institute email id here"
               style={{ color: "white", border: "1px dashed rgb(221, 158, 41)" }}
               onChange={setinputusername}
