@@ -3,6 +3,7 @@ import "./Studentlogin.css";
 
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import loginotp from "./loginotp";
 export default function Studentlogin() {
   const [usernameEmail, setusernameEmail] = useState(" ");
   const [isActive, setIsActive] = useState(false);
@@ -13,15 +14,14 @@ export default function Studentlogin() {
     setIsActive(false);
   }
   function conditiononGetOTPbutton() {
-    // if (usernameEmail === null) {
-    //   navigate("/Blanktextarea", { state: { name: "studentloginpage" } });
-    // } else {
     if (usernameEmail === " ") {
       setIsActive(true);
     } else if (usernameEmail.length === 0) {
       setIsActive(true);
     } else {
-      history.push("/Otpverificationpage", { nameofEmail: `${usernameEmail}` });
+
+          if(usernameEmail) history.push("/Otpverificationpage", { nameofEmail: usernameEmail});
+      
     }
   }
   function shouldBlur(e) {
@@ -55,7 +55,7 @@ export default function Studentlogin() {
               type="text"
               name="email"
               id="EMAIL"
-              autocomplete="off"
+              autoComplete="off"
               placeholder="Type your institute email id here"
               style={{ color: "white", border: "1px dashed rgb(221, 158, 41)" }}
               onChange={setinputusername}

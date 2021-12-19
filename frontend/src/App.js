@@ -1,11 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 // import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Studentspoint from "./components/Studentspoint";
-import Studentprofile from "./components/Studentprofile";
 import Societypoint from "./components/Societypoint";
 import Events from "./components/Events";
 import Newsbulletin from "./components/Newsbulletin";
@@ -16,21 +13,29 @@ import Studentlogin from "./components/Studentlogin";
 import Officiallogin from "./components/Officiallogin";
 import Otpverificationpage from "./components/Otpverificationpage";
 import Blanktextarea from "./components/Blanktextarea";
+import SocietyPage from "./components/SocietyPage";
+import BillReimbursementPortal from "./components/BillReimbursementPortal";
 // import Navbar from "./components/Navbar";
 import {
   BrowserRouter as Router,
   Redirect,
   Switch,
   Route,
-  link,
 } from "react-router-dom";
+<<<<<<< HEAD:src/App.js
 import OfficeBearers from "./components/OfficeBearers";
 import OfficeStaffs from "./components/OfficeStaffs";
 import Secrataries from "./components/Secrataries";
+=======
+import StudentsProfile from "./components/StudentsProfile";
+>>>>>>> 6f7b6db700cbd58c4e38cebd09834fce8d083673:frontend/src/App.js
 
 function App() {
   const [click, setclick] = useState(true);
   const handleclick = () => setclick(!click);
+  function IamClickingLinktwo() {
+    window.open("https://www.instagram.com/aryanroy.tony?r=nametag");
+  }
   return (
     <>
       <Router>
@@ -54,7 +59,7 @@ function App() {
                       </NavLink>
                     </li>
                     <li className="nav-item navitem navitem_top">
-                      <NavLink to="/studentprofile" exact>
+                      <NavLink to="/StudentsProfile" exact>
                         Student Profile
                       </NavLink>
                     </li>
@@ -78,7 +83,7 @@ function App() {
                         Students' Point
                       </NavLink>
                     </li>
-                    <li className="nav-item navitem navitem_top">
+                    <li className="nav-item navitem navitem_top ">
                       <NavLink to="/quickinfo" exact>
                         Quick Info
                       </NavLink>
@@ -86,6 +91,11 @@ function App() {
                     <li className="nav-item navitem navitem_top">
                       <NavLink to="/archives" exact>
                         Archives
+                      </NavLink>
+                    </li>
+                    <li className="nav-item navitem navitem_top">
+                      <NavLink to="/profile" exact>
+                        Profile
                       </NavLink>
                     </li>
                   </ul>
@@ -106,7 +116,7 @@ function App() {
                         </NavLink>
                       </li>
                       <li className="nav-item navitem navitem_top">
-                        <NavLink to="/studentprofile" exact>
+                        <NavLink to="/StudentsProfile" exact>
                           Student Profile
                         </NavLink>
                       </li>
@@ -207,7 +217,7 @@ function App() {
                         </NavLink>
                       </li>
                       <li className="nav-item navitem navitem_top">
-                        <NavLink to="/studentprofile" exact>
+                        <NavLink to="/StudentsProfile" exact>
                           Student Profile
                         </NavLink>
                       </li>
@@ -301,7 +311,7 @@ function App() {
                         </NavLink>
                       </li>
                       <li className="nav-item  navitem navitem_top">
-                        <NavLink to="/studentprofile" exact>
+                        <NavLink to="/StudentsProfile" exact>
                           Student Profile
                         </NavLink>
                       </li>
@@ -438,7 +448,7 @@ function App() {
                 >
                   <ul className=" navbar-nav ml-auto">
                     <li className="nav-item ml-auto  navitem navitem_top">
-                      <NavLink to="/studentprofile" exact>
+                      <NavLink to="/StudentsProfile" exact>
                         Student Profile
                       </NavLink>
                     </li>
@@ -528,7 +538,7 @@ function App() {
                       </NavLink>
                     </li>
                     <li className="nav-item ml-auto navitem navitem_top">
-                      <NavLink to="/studentprofile" exact>
+                      <NavLink to="/StudentsProfile" exact>
                         Student Profile
                       </NavLink>
                     </li>
@@ -568,9 +578,6 @@ function App() {
             </div>
           </div>
           <Switch>
-            <Route path="/Studentprofile" exact>
-              <Studentprofile />
-            </Route>
             <Route path="/Events" exact>
               <Events />
             </Route>
@@ -580,9 +587,7 @@ function App() {
             <Route path="/Newsbulletin" exact>
               <Newsbulletin />
             </Route>
-            <Route path="/Studentspoint" exact>
-              <Studentspoint />
-            </Route>
+
             <Route path="/Quickinfo" exact>
               <Quickinfo />
             </Route>
@@ -615,8 +620,17 @@ function App() {
             <Route path="/Blanktextarea" exact>
               <Blanktextarea />
             </Route>
+            <Route path="/SocietyPage" exact>
+              <SocietyPage />
+            </Route>
+            <Route path="/BillReimbursementPortal" exact>
+              <BillReimbursementPortal />
+            </Route>
             <Route path="/" exact>
               <Home />
+            </Route>
+            <Route path="/StudentsProfile" exact>
+              <StudentsProfile />
             </Route>
             <Redirect to="/" />
           </Switch>

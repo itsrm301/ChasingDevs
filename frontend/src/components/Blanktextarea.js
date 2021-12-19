@@ -107,7 +107,7 @@ export default function Blanktextarea() {
                 type="text"
                 name="question"
                 id="Question"
-                autocomplete="off"
+                autoComplete="off"
                 placeholder={`What is ${FirstNumber} - ${SecondNumber} = ?`}
                 style={
                   usernameAnswer !== `${ResultOftwoNumvber}` &&
