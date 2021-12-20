@@ -22,13 +22,11 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-<<<<<<< HEAD:src/App.js
 import OfficeBearers from "./components/OfficeBearers";
 import OfficeStaffs from "./components/OfficeStaffs";
 import Secrataries from "./components/Secrataries";
-=======
 import StudentsProfile from "./components/StudentsProfile";
->>>>>>> 6f7b6db700cbd58c4e38cebd09834fce8d083673:frontend/src/App.js
+import Button from "./components/Button";
 
 function App() {
   const [click, setclick] = useState(true);
@@ -589,7 +587,7 @@ function App() {
             </Route>
 
             <Route path="/Quickinfo" exact>
-              <Quickinfo />
+              <Button />
             </Route>
             <Route path="/Quickinfo/OfficeBearers" exact>
               <OfficeBearers />
