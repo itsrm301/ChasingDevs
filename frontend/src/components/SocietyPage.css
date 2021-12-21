@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 15px;
 }
 
 .LeftSocContainer {
@@ -18,6 +19,7 @@
   width: 100%;
   height: 100%;
   padding: 50px;
+  /* border: 1px solid red; */
 }
 
 .RightSocContainer {
@@ -50,6 +52,7 @@
     justify-content: center;
     align-items: center;
     margin: 20px;
+    padding-bottom: 20px;
 }
 .buttonBox button {
     align-items: center;
@@ -58,4 +61,11 @@
     border: 1px dashed rgb(221, 158, 41);
     color: #93a8b2;
     font-weight: bold;
+    background-color: black;
+}
+
+.buttonBox button:hover{
+    background-color: rgba(60, 74, 80, 0.116);
+    /* border-color: #003249; */
+    box-shadow: -1px 0px 8px 0px grey;
 }
