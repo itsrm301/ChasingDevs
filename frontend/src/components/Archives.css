@@ -1,3 +1,73 @@
-h1 {
-  color: white;
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Imperial+Script&display=swap');
+
+/* *{
+  color: white !important;
+  font-family: 'Charm', cursive;
+} */
+
+.archive{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.archive_options{
+  display: flex;
+  width: 50%;
+  border: 1px dashed rgb(221, 158, 41);
+  margin: 20px 0;
+}
+
+.archive_options > p{
+  margin-right: 20px;
+  font-size: 20px;
+  list-style: none;
+  margin: 8px;
+  margin-right: 20px;
+  padding: 4px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.archive_bg{
+  height: 900px;
+}
+
+.archive_bg > h1{
+  align-self: center;
+}
+
+.archive_options > p:hover{
+  background-color: black;
+  color: rgb(221, 158, 41);
+  padding: 4px;
+
+}
+
+.archive_options > p:active{
+      border: 1px dashed;
+      padding: 5px;
+      color: rgb(221, 158, 41);
+      box-shadow: 0px 0px 0px 0px black;
+}
+
+.archive_options >p::after{
+  content: "";
+  /* position: absolute; */
+  height: 1px;
+  width: 100%;
+  background-color: #9f9b67;
+  color: rgb(221, 158, 41);
+
+  left: 0;
+  bottom: -2px;
+  animation: underline_appear 1s linear;
+}
+
+@keyframes underline_appear {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }

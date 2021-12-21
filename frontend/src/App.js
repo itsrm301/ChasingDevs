@@ -15,6 +15,7 @@ import Otpverificationpage from "./components/Otpverificationpage";
 import Blanktextarea from "./components/Blanktextarea";
 import SocietyPage from "./components/SocietyPage";
 import BillReimbursementPortal from "./components/BillReimbursementPortal";
+import Student from "./Student";
 // import Navbar from "./components/Navbar";
 import {
   BrowserRouter as Router,
@@ -614,8 +615,8 @@ function App() {
             <Route path="/" exact>
               <Home />
             </Route>
-            <Route path="/StudentsProfile" exact>
-              <StudentsProfile />
+            <Route path="/studentspoint" exact>
+              <Student />
             </Route>
             <Redirect to="/" />
           </Switch>
