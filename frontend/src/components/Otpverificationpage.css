@@ -197,7 +197,7 @@
   /* border: 1px solid red; */
   opacity: 0;
   position: absolute;
-  right: 62px;
+  top: -1000000000000000000000000px;
 }
 .resendhover {
   color: #a26363;

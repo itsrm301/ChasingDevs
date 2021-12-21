@@ -7,15 +7,15 @@ export default function Otpverificationpage() {
   const formatNumber = (number) => `0${number}`.slice(-2);
   const history = useHistory();
   const location = useLocation();
-  const enteredEmailaddress= location.state.nameofEmail;
-  const [actualotp,setActualotp]=useState("");
-  const [errors,setErrors]=useState("");
+  const enteredEmailaddress = location.state.nameofEmail;
+  const [actualotp, setActualotp] = useState("");
+  const [errors, setErrors] = useState("");
   const getRemaining = (time) => {
     const mins = Math.floor(time / 60);
     const secs = time - mins * 60;
     return { mins: formatNumber(mins), secs: formatNumber(secs) };
   };
-  const [remainingSecs, setRemainingSecs] = useState(10);
+  const [remainingSecs, setRemainingSecs] = useState(20);
   const [againotpreminder, setagainotpreminde] = useState(
     `we’ve sent a verification code to your email: ${enteredEmailaddress}`
   );
@@ -26,38 +26,59 @@ export default function Otpverificationpage() {
   const [userOtp, setuserOtp] = useState("");
   function setuserOtpfun(e) {
     setuserOtp(e.target.value);
+
     setIsActive(false);
-  }
-  function otpverification(){
-   
-    loginotp(enteredEmailaddress).then(res=>{
-      setActualotp(res.OTP);
-    }).catch(e=>console.log(e));
-  }
-  function conditionLoginbutton() {
-    if (userOtp === "") {
-      setErrors("Enter the OTP!");
-    } else if(actualotp==userOtp){
-        history.push("/Blanktextarea", {
-        whichLoginpage: "student",
-      });
-    }else{
-      setErrors("Wrong Otp!,try again");
+
+    if (remainingSecs === 0) {
+      setErrors("Your OTP has expired!");
     }
   }
-
-
+  function otpverification() {
+    if (remainingSecs !== 0) {
+      loginotp(enteredEmailaddress)
+        .then((res) => {
+          setActualotp(res.OTP);
+        })
+        .catch((e) => console.log(e));
+    }
+  }
+  function resetOtpVerification() {
+    loginotp(enteredEmailaddress)
+      .then((res) => {
+        setActualotp(res.OTP);
+      })
+      .catch((e) => console.log(e));
+  }
+  function conditionLoginbutton() {
+    if (remainingSecs === 0) {
+      setIsActive(true);
+      setErrors("Your OTP has expired!");
+    } else {
+      if (userOtp === "") {
+        setErrors("Enter the OTP!");
+        setIsActive(true);
+      } else if (actualotp == userOtp) {
+        history.push("/Blanktextarea", {
+          whichLoginpage: "student",
+        });
+      } else {
+        setIsActive(true);
+        setErrors("Wrong Otp, try again!");
+      }
+    }
+  }
   function reset() {
-    setRemainingSecs(10);
+    setRemainingSecs(20);
+
     setagainotpreminde(
       `Again a verification code is sent to your email: ${enteredEmailaddress}`
     );
-    otpverification();
+    resetOtpVerification();
     // console.log("a");
     // setIsActive(false);
   }
 
-  useEffect(()=>otpverification(),[]);
+  useEffect(() => otpverification(), []);
   useEffect(() => {
     let interval = null;
     if (remainingSecs !== 0) {
@@ -111,7 +132,7 @@ export default function Otpverificationpage() {
             <div className={secs !== "00" ? "otptimer" : "OtpOpacityZero"}>
               {time}
             </div>
-           
+
             <div
               className={
                 secs === "00" ? "otptimer resendhover" : "OtpOpacityZeroresend"
@@ -126,7 +147,10 @@ export default function Otpverificationpage() {
               id="EMAIL"
               autoComplete="off"
               placeholder="One time password = ?"
-              style={{ color: "white", border: "1px dashed rgb(221, 158, 41)" }}
+              style={{
+                color: "white",
+                border: "1px dashed rgb(221, 158, 41)",
+              }}
               onChange={setuserOtpfun}
               onMouseOut={shouldBlur}
               onMouseOver={shouldFocus}
@@ -135,7 +159,9 @@ export default function Otpverificationpage() {
           <div className="otperrorpositionrelative">
             <div
               className="otpblankerror"
-            >{errors}
+              style={!isActive ? { opacity: "0" } : { opacity: "1" }}
+            >
+              {errors}
             </div>
           </div>
           <div className="otpdivofgetotpbutton">

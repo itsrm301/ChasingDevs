@@ -7,6 +7,7 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "babel-jest": "^26.6.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.2",
     "fs": "^0.0.1-security",
     "google-spreadsheet": "^3.2.0",
@@ -36,5 +37,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roy-com/ChasingDevs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roy-com/ChasingDevs/issues"
+  },
+  "homepage": "https://github.com/Roy-com/ChasingDevs#readme"
 }
