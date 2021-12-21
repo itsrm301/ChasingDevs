@@ -82,6 +82,7 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: -25px;
 }
 #GetOTPButton {
   padding: 4px;
@@ -116,8 +117,20 @@ input {
   justify-content: flex-end;
   position: absolute;
   right: 73px;
-  top: -12px;
+  top: -37px;
   font-size: 13px;
+}
+#suffuxemailAvailableForStudent {
+  /* display: none; */
+  position: relative;
+  top: -40px;
+  right: -319px;
+  width: 131px;
+  height: 23px;
+  font-size: 12px;
+  background: black;
+  color: #b19374;
+  border: none;
 }
 @media only screen and (min-width: 0px) and (max-width: 990px) {
   .centerstudentlogincontainer {
@@ -139,6 +152,9 @@ input {
   .blankerror {
     right: 39px;
   }
+  #suffuxemailAvailableForStudent {
+    right: -287px;
+  }
 }
 @media only screen and (min-width: 0px) and (max-width: 510px) {
   .centerstudentlogincontainer {
@@ -146,6 +162,7 @@ input {
     padding-top: 5px;
     /* height: 1000px; */
   }
+
   .studentlogintopimage img {
     width: 400px;
     height: 223px;
@@ -166,6 +183,13 @@ input {
   .blankerror {
     font-size: 12px;
   }
+  #suffuxemailAvailableForStudent {
+    right: -186px;
+    top: -36px;
+  }
+  #GetOTPButton {
+    margin-top: -41px;
+  }
 }
 @media only screen and (min-width: 0px) and (max-width: 410px) {
   .centerstudentlogincontainer {
@@ -184,6 +208,9 @@ input {
     right: 13px;
     font-size: 11px;
   }
+  #suffuxemailAvailableForStudent {
+    right: -161px;
+  }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 356px) {
@@ -201,6 +228,9 @@ input {
   .blankerror {
     right: 8px;
     font-size: 10px;
+  }
+  #suffuxemailAvailableForStudent {
+    right: -144px;
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 356px) {

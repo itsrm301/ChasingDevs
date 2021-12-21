@@ -13,34 +13,34 @@ const newstyle={
 const nutstyle={
     color:"wheat",
     backgroundColor:"grey",
-    width:"33%",
+    width:"50%",
     height:"auto",
     border: "1px solid white",
     boxShadow: "50px 100px 180px grey",
-    margin: "10px"
+    margin: "10px",
+    align: "center"
 };
 
 const imagestyle={
     color:"wheat",
     backgroundColor:"white",
-    width:"33%",
-    height:"auto",
+    width:"50%",
+    height:"300px",
     border: "1px solid black",
-    margin: "10px"
+    margin: "10px",
+    boxShadow: "50px 100px 180px grey",
 };
 
-export default function Slides(props){
+export default function Colslide(props){
     return(
         <div>
             <Container>
                 <Row>
                     <Col style={nutstyle}>
-                        <h3>In A Nutshell</h3>
-                        <p>Date:{props.date}</p>
-                        <p>Time:{props.time}</p>
-                        <p>Venue:{props.venue}</p>
-                        <p>Reg. Deadline:{props.regdead}</p>
-                        <p><a href={props.reglink}>Registration Link</a></p>
+                        <h3>Winners</h3>
+                        <p>1st Prize:{props.name1}</p>
+                        <p>2nd Prize:{props.name2}</p>
+                        <p>3rd Prize:{props.name3}</p>
                     </Col>
                     <Col style={imagestyle}>
                         <img
@@ -50,13 +50,8 @@ export default function Slides(props){
                             style={newstyle}
                         />
                     </Col>
-                    <Col style={nutstyle}>
-                        <h3>Description</h3>
-                        <p>{props.des}</p>
-                    </Col>
                 </Row>
             </Container>
         </div>
     );
 }
-

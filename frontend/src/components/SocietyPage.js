@@ -79,46 +79,65 @@ export default function SocietyPage() {
               paddingRight: 0,
             }}
           >
-            <Card style={{justifyContent: 'center', alignItems: 'center', backgroundColor: '#93a8b2'}}>
-            <Card style={{ width: "80%", margin: 15 }}>
-              {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-              <Card.Body>
-                <Card.Title>
-                  <h2>Event 1</h2>
-                </Card.Title>
-                <Card.Text>
-                  <p>
+            <Card
+              style={{
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "#93a8b2",
+              }}
+            >
+              <Card style={{ width: "80%", margin: 15 }}>
+                {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+                <Card.Body>
+                  <Card.Title>
+                    <h2>Event 1</h2>
+                  </Card.Title>
+                  <Card.Text>
+                    <p>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </Card.Text>
+                  <Link
+                    variant="primary"
+                    style={{ textDecoration: "none" }}
+                    to="/SocietyPage"
+                  >
+                    Go somewhere
+                  </Link>
+                </Card.Body>
+              </Card>
+              <Card style={{ width: "80%", margin: 15 }}>
+                {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+                <Card.Body>
+                  <Card.Title>
+                    <h2>Event 2</h2>
+                  </Card.Title>
+                  <Card.Text>
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
-                  </p>
-                </Card.Text>
-                <Link variant="primary" style={{ textDecoration: "none" }}>
-                  Go somewhere
-                </Link>
-              </Card.Body>
+                  </Card.Text>
+                  <Link
+                    variant="primary"
+                    style={{ textDecoration: "none" }}
+                    to="/SocietyPage"
+                  >
+                    Go somewhere
+                  </Link>
+                </Card.Body>
+              </Card>
             </Card>
-            <Card style={{ width: "80%", margin: 15 }}>
-              {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-              <Card.Body>
-                <Card.Title>
-                  <h2>Event 2</h2>
-                </Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <Link variant="primary" style={{ textDecoration: "none" }}>
-                  Go somewhere
-                </Link>
-              </Card.Body>
-            </Card>
-            </Card>
-            
           </div>
         </div>
       </div>
       <div className="buttonBox">
-        <button onClick={() => {history.push("/BillReimbursementPortal")}}>Bill Reimbursement Portal</button>
+        <button
+          onClick={() => {
+            history.push("/BillReimbursementPortal");
+          }}
+        >
+          Bill Reimbursement Portal
+        </button>
       </div>
     </div>
   );
