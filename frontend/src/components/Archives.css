@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  color: white;
 }
 
 .archive_options{
@@ -29,11 +30,18 @@
 }
 
 .archive_bg{
-  height: 900px;
+  height: 1000px;
+  width: 100%;
+  background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/256559/pexels-photo-256559.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 150%;
 }
 
-.archive_bg > h1{
-  align-self: center;
+.archive_bg  h1{
+  margin-left: 33%;
+  margin-top: 20%;
+  font-size: 100px;
 }
 
 .archive_options > p:hover{
