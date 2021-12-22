@@ -3,14 +3,16 @@ import "./SocietyPage.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Carousel from "react-bootstrap/Carousel";
 import { Card } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 
 export default function SocietyPage() {
   const history = useHistory();
+  const location = useLocation();
+  const Socname= location.state.Socname;
   return (
     <div>
       <div className="societyPageName">
-        <h1>SOCIETY NAME</h1>
+        <h1>{Socname}</h1>
       </div>
       <div className="societyPageContainer">
         <div className="LeftSocContainer">
@@ -26,13 +28,13 @@ export default function SocietyPage() {
               <Carousel.Item interval={3000}>
                 <img
                   className="d-block w-100"
-                  src={process.env.PUBLIC_URL + "/image/crousel_b.jpg"}
+                  src={process.env.PUBLIC_URL + "/image/crousel_a.jpg"}
                   alt="One"
                 />
                 <div className="FooterRightHomeContainer">
                   <Carousel.Caption>
-                    <h3 className="captionHeading">Stay together</h3>
-                    <p className="captionpara">Thank you for being with me</p>
+                    <h3 className="captionHeading">Lorem ipsum</h3>
+                    <p className="captionpara">Lorem ipsum dolor, sit amet</p>
                   </Carousel.Caption>
                 </div>
               </Carousel.Item>
@@ -40,15 +42,15 @@ export default function SocietyPage() {
               <Carousel.Item interval={3000}>
                 <img
                   className="d-block w-100"
-                  src={process.env.PUBLIC_URL + "/image/crousel_d.jpg"}
+                  src={process.env.PUBLIC_URL + "/image/crousel_c.jpg"}
                   alt="Two"
                 />
                 <div className="FooterRightHomeContainer">
                   {" "}
                   <Carousel.Caption>
-                    <h3 className="captionHeading">Cheers</h3>
+                    <h3 className="captionHeading">Lorem ipsum</h3>
                     <p className="captionpara">
-                      We all are looking good together
+                    Lorem ipsum dolor, sit amet
                     </p>
                   </Carousel.Caption>
                 </div>
@@ -62,8 +64,8 @@ export default function SocietyPage() {
                 <div className="FooterRightHomeContainer">
                   {" "}
                   <Carousel.Caption>
-                    <h3 className="captionHeading">Happy Diwali</h3>
-                    <p className="captionpara">I'm missing my home's Diwali</p>
+                    <h3 className="captionHeading">Lorem ipsum</h3>
+                    <p className="captionpara">Lorem ipsum dolor, sit amet</p>
                   </Carousel.Caption>
                 </div>
               </Carousel.Item>
@@ -83,10 +85,11 @@ export default function SocietyPage() {
               style={{
                 justifyContent: "center",
                 alignItems: "center",
-                backgroundColor: "#93a8b2",
+                backgroundColor: "#000",
               }}
             >
-              <Card style={{ width: "80%", margin: 15 }}>
+              <Card style={{ width: "80%", margin: 15, backgroundColor: 'black',
+              boxShadow: '-1px 0px 8px 0px grey' }}>
                 {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                 <Card.Body>
                   <Card.Title>
@@ -94,34 +97,27 @@ export default function SocietyPage() {
                   </Card.Title>
                   <Card.Text>
                     <p>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Accusamus, ratione.
                     </p>
                   </Card.Text>
-                  <Link
-                    variant="primary"
-                    style={{ textDecoration: "none" }}
-                    to="/SocietyPage"
-                  >
+                  <Link variant="primary" style={{ textDecoration: "none" }}>
                     Go somewhere
                   </Link>
                 </Card.Body>
               </Card>
-              <Card style={{ width: "80%", margin: 15 }}>
+              <Card style={{ width: "80%", margin: 15,backgroundColor: 'black',
+              boxShadow: '-1px 0px 8px 0px grey'  }}>
                 {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                 <Card.Body>
                   <Card.Title>
                     <h2>Event 2</h2>
                   </Card.Title>
                   <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Accusamus, ratione.
                   </Card.Text>
-                  <Link
-                    variant="primary"
-                    style={{ textDecoration: "none" }}
-                    to="/SocietyPage"
-                  >
+                  <Link variant="primary" style={{ textDecoration: "none" }}>
                     Go somewhere
                   </Link>
                 </Card.Body>
