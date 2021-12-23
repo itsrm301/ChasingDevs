@@ -34,7 +34,7 @@ export default function Societypoint() {
           <div className="SocietyButtonBox">
             <button
               className="society_box"
-              onClick={() => history.push("/SocietyPage")}
+              onClick={() => history.push("/SocietyPage", {Socname: val.soc_name} )}
             >
               {val.soc_name}
             </button>

@@ -15,6 +15,7 @@ import Otpverificationpage from "./components/Otpverificationpage";
 import Blanktextarea from "./components/Blanktextarea";
 import SocietyPage from "./components/SocietyPage";
 import BillReimbursementPortal from "./components/BillReimbursementPortal";
+import Slides from "./components/Slides";
 // import Navbar from "./components/Navbar";
 import {
   BrowserRouter as Router,
