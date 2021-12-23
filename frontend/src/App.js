@@ -26,7 +26,7 @@ import OfficeBearers from "./components/OfficeBearers";
 import OfficeStaffs from "./components/OfficeStaffs";
 import Secrataries from "./components/Secrataries";
 import StudentsProfile from "./components/StudentsProfile";
-import Button from "./components/Button";
+// import Button from "./components/Button";
 
 function App() {
   const [click, setclick] = useState(true);
@@ -587,7 +587,7 @@ function App() {
             </Route>
 
             <Route path="/Quickinfo" exact>
-              <Button />
+              <Quickinfo />
             </Route>
             <Route path="/Quickinfo/OfficeBearers" exact>
               <OfficeBearers />
