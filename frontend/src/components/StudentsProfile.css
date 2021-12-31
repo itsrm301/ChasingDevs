@@ -1,23 +1,24 @@
-* {
-  box-sizing: border-boxing;
-  margin: 0;
-  padding: 0;
+*{
+  box-sizing : border-boxing;
+  margin : 0;
+  padding : 0;
 }
-html {
-  font-size: 16px;
+html{
+  font-size:16px;
+  scroll-behavior: smooth;
 }
-body {
-  /* background-color: rgb(76, 188, 240); */
-  background-color: black;
+body{
+ /* background-color: rgb(76, 188, 240); */
+ background-color: black;
 }
 
-h2 {
+h2{
   text-align: center;
-  color: white;
+  color:white;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-h3 {
+h3{
   color: black;
   text-align: center;
   font-weight: bold;
@@ -25,113 +26,161 @@ h3 {
   margin: 0.5rem;
 }
 
-.your-achievements {
-  width: 60%;
-  margin: 2rem 0 0 9%;
+#your-achievements{
+  width : 60%;
+  margin: 2rem 0 2rem 9% ;
+
 }
-.achievements-content {
+.achievements-content{
   padding: 1rem 1rem;
   /* width: 60%; */
   background-color: rgba(196, 196, 196, 1);
   /* padding: 1rem 1rem;  */
 }
-.achievement {
+.achievement{
   background-color: rgba(172, 172, 172, 1);
-  padding: 0.5rem;
+  padding : 0.5rem;
+  margin:10px;
 }
-.achievement-title {
+.no-achievement{
+  background-color: rgba(172, 172, 172, 1);
+  padding : 0.5rem;
+  margin:10px;
+  font-size:1.05rem;
+  text-align:center;
+  /* cursor:not-allowed; */
+  display: none;
+}
+.achievement-title{
   font-size: 1.05rem;
   font-weight: bold;
 }
-.btn {
+
+.btn{
   /* background-color:rgba(118, 118, 118, 1); */
   background-color: brown;
-  padding: 2px;
-  position: relative;
+  padding:5px;
+  position :relative;
+  cursor: pointer;
   /* left:4rem; */
-  color: white;
-  font-weight: bold;
+  color:white;
+  font-weight:bold;
 }
-.btn:active {
-  transition-duration: 30;
+.add-other-achievement-btn{
+  background-color: brown;
+  padding:5px;
+  /* margin:5px; */
+  width:100%;
+  position :relative;
+  cursor: pointer;
+  /* left:4rem; */
+  color:white;
+  font-weight:bold;
 }
-.buttons {
-  display: flex;
+.add-other-achievement-btn a{
+  text-decoration: none;
+  color:white;
+}
+.buttons{
+  display:flex;
   justify-content: flex-end;
 }
 
-.floating-links-light {
-  background-color: #9d9d9d;
-  width: 12rem;
+.floating-links-light{
+  background-color: #9D9D9D;
+  width:12rem;
   padding: 0.7rem 0;
 }
-.floating-links-dark {
-  background-color: #3b3b3b;
-  width: 12rem;
+.floating-links-dark{    
+  background-color:#3B3B3B;
+  width:12rem;
   padding: 0.7rem 0;
 }
-.floating-links-light a {
+.floating-links-light a{
+  text-decoration:none;
+  color:black;
+  font-weight: bold;
+}
+.floating-links-dark a{
+  /* width:16rem; */
   text-decoration: none;
-  color: black;
+  color:white;
   /* font-weight: bold; */
 }
-.floating-links-dark a {
-  width: 16rem;
+#students-grievances-form{
+  width:12rem;
+  background-color: #9D9D9D;
+  padding: 0.7rem 0;
+  margin-top: 1.7rem;
+}
+#students-grievances-form a{
   text-decoration: none;
-  color: white;
+  color:black;
   font-weight: bold;
 }
 /* .floating-links {
-    position: fixed;
-    width:12rem;
-    right:10%;
-    top:5.6rem;
-    color:white;
-    text-align: center;    
+  position: fixed;
+  width:12rem;
+  right:10%;
+  top:5.6rem;
+  color:white;
+  text-align: center;    
 } */
 
-/* for mobiles phones */
-@media screen and (max-width: 768px) {
-  .your-achievements {
-    width: 80%;
+/* for mobiles phones and table */
+@media only screen  and (max-width:768px) {
+  #your-achievements{
+      width:80%;
   }
-  .floating-links {
-    display: none;
+  .floating-links{
+      display: none;
   }
 }
 /*  For tablets  */
-@media screen and (min-width: 769px) and (max-width: 991px) {
-  .your-achievements {
-    width: 80%;
+@media only screen and ( min-width:769px )and (max-width:991px) {
+  #your-achievements{
+      width:80%;
   }
-  .floating-links {
-    display: none;
+  .floating-links{
+      display: none;
   }
 }
 
 /* medium screen devices */
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  .floating-links {
-    position: fixed;
-    width: 12rem;
-    right: 8%;
-    top: 5.6rem;
-    color: white;
-    text-align: center;
+@media only screen and (min-width:992px) and (max-width:1199px) {
+  .floating-links{
+      position: fixed;
+      width:12rem; 
+      right:8%;
+      top:5.6rem;
+      color:white;
+      text-align: center;
   }
 }
 /* large devices */
-@media (min-width: 1200px) {
-  /* .floating-links{
-    position : fixed;
-    right: 10% ;
-    } */
+@media only screen and (min-width:1200px) {
   .floating-links {
-    position: fixed;
-    width: 12rem;
-    right: 10%;
-    top: 5.6rem;
-    color: white;
-    text-align: center;
+  position: fixed;
+  width:12rem; 
+  right:10%;
+  top:5.6rem;
+  color:white;
+  text-align: center;    
   }
+
+
+}
+#students-grievances-form{
+  cursor: pointer;
+  color: #f8f3f3;
+  background-color: #5858d2;
+}
+.achievement-description {
+  font-size: 13px;
+  font-family: 'Font Awesome 5 Free';
+}
+.achievement-title {
+  font-size: 21px;
+  color: black;
+  font-family: 'ZCOOL XiaoWei';
 }
