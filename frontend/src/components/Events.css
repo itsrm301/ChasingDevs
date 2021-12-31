@@ -1,0 +1,51 @@
+.body{color: black;}
+
+.main{
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+
+h4{
+    color:white;
+    text-align:center;
+    font-size: 180%;
+}
+
+.heading{
+    text-align:center;
+    color:white;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 300%;
+    
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    
+  }
+  
+.flex-container > div {
+    margin: 25px;
+  }
+
+#quote1{
+    height:auto;
+    width:700px;
+    margin: 25px;
+}
+
+#quote2{
+    height:auto;
+    width:700px;
+    align-items: right;
+    margin: 25px;
+}
+
+.subheading{
+    text-align:center;
+    color:#0000FF;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 300%;
+}

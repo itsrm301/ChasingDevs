@@ -12,21 +12,21 @@ const newstyle={
 
 const nutstyle={
     color:"wheat",
-    backgroundColor:"grey",
+    backgroundColor:"rgb(40,40,40)",
     width:"33%",
     height:"auto",
-    border: "1px solid white",
+    border: "10px solid white",
     boxShadow: "50px 100px 180px grey",
     margin: "10px"
 };
 
-const imagestyle={
-    color:"wheat",
-    backgroundColor:"white",
+const colimg={
+    
+    backgroundColor:"black",
     width:"33%",
     height:"auto",
-    border: "1px solid black",
-    margin: "10px"
+    border: "10px solid white",
+    padding:"25px 25px 25px 25px"
 };
 
 export default function Slides(props){
@@ -42,7 +42,7 @@ export default function Slides(props){
                         <p>Reg. Deadline:{props.regdead}</p>
                         <p><a href={props.reglink}>Registration Link</a></p>
                     </Col>
-                    <Col style={imagestyle}>
+                    <Col style={colimg}>
                         <img
                             className="d-block w-100"
                             src={props.image}

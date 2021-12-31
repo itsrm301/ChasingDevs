@@ -10,7 +10,7 @@ export default function twocolslideCarousel() {
     <>
       <Carousel>
         <CarouselItem>
-          <Colslide name1="Sachin Vinayak S" name2="Jayatee Srivastava" name3="Pritam Mallick"  image="https://scontent.fixr3-1.fna.fbcdn.net/v/t39.30808-6/p843x403/262357025_4570569349693634_6786887930929831620_n.jpg?_nc_cat=107&_nc_rgb565=1&ccb=1-5&_nc_sid=730e14&_nc_ohc=4Sb097emZFUAX-9PVRM&tn=09A5ANVW3M_RE1Rj&_nc_ht=scontent.fixr3-1.fna&oh=00_AT967qzqIsWRMbxwcDZkSCAtMr5xHCrTaECQ1XK8rhrkPw&oe=61C7A110" 
+          <Colslide name1="Sachin Vinayak S" name2="Jayatee Srivastava" name3="Pritam Mallick"  image="https://scontent.frdp4-1.fna.fbcdn.net/v/t39.30808-6/p843x403/262357025_4570569349693634_6786887930929831620_n.jpg?_nc_cat=107&_nc_rgb565=1&ccb=1-5&_nc_sid=730e14&_nc_ohc=54tTaVZPJO8AX8-r_ng&tn=09A5ANVW3M_RE1Rj&_nc_ht=scontent.frdp4-1.fna&oh=00_AT-cAbpqDtRcOJRrkGzvHHxkX-ehK_9seXVgmCP7DkU7HQ&oe=61D18450" 
           />
         </CarouselItem>
         <CarouselItem>

@@ -1,29 +1,46 @@
 import React from "react";
-import Carousel from 'react-bootstrap/Carousel'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { CarouselItem } from "react-bootstrap";
-//import Slides from "./Slides";
-import Eventslide from "./Eventslide";
-import Slideshow from "./Slideshow";
+import "./Events.css"
+import {
+    BrowserRouter as Router,
+    Redirect,
+    Switch,
+    Route,
+  } from "react-router-dom";
+import Sports from "./Sports";
+import Picture from "./Picture";
+import Social from "./Social";
+import Tech from "./Tech";
+import Student from "./Student";
+import Result from "./Result";
 
-export default function Events() {
-  return (
-    <>
-      <h2>Technology</h2>
-      <Eventslide />
-      <h2>Student's Welfare</h2>
-      <Eventslide />
-      <h2>Sports And Games</h2>
-      <Eventslide />
-      <h2>Social And Cultural</h2>
-      <Eventslide />
-      <h2>Results</h2>
-      <h2>Events</h2>
-      <Slideshow />
-      <h2>General Championship</h2>
-      <Slideshow />
-      <h2>Inter IIT</h2>
-      <Slideshow />
-    </>
-  );
+
+export default function Events(){
+    return (
+        <>
+        <Router>
+        <Switch>
+            
+            <Route path="/Result" exact>
+                <Result  />
+            </Route>
+            <Route path="/Student" exact>
+                <Student  />
+            </Route>
+            <Route path="/Sports" exact>
+                <Sports  />
+            </Route>
+            <Route path="/Social" exact>
+                <Social  />
+            </Route>
+            <Route path="/Tech" exact>
+                <Tech  />
+            </Route>
+            <Route path="/" exact>
+                <Picture  />
+            </Route>
+            <Redirect to="/" />   
+        </Switch>
+        </Router>
+        </>
+    );
 }
