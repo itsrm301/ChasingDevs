@@ -20,15 +20,15 @@ function GeneralChamp() {
                     <h1>{ele}</h1>
                     <div className='gc_rank'>
                         <div className='gc_rank_img'>
-                            <img src='https://image.freepik.com/free-vector/golden-number-one-label-design_1017-32241.jpg' alt='#'></img>
-                            <h2>IIT 1</h2>
-                        </div>
-                        <div className='gc_rank_img'>
-                            <img src='https://image.freepik.com/free-vector/golden-number-one-label-design_1017-32241.jpg' alt='#'></img>
+                            <img src='image/Second_rank.png' alt='#'></img>
                             <h2>IIT 2</h2>
                         </div>
                         <div className='gc_rank_img'>
-                            <img src='https://image.freepik.com/free-vector/golden-number-one-label-design_1017-32241.jpg' alt='#'></img>
+                            <img src='image/First_rank.png' alt='#'></img>
+                            <h2>IIT 1</h2>
+                        </div>
+                        <div className='gc_rank_img'>
+                            <img src='image/Third_rank.png' alt='#'></img>
                             <h2>IIT 3</h2>
                         </div>
                     </div>
