@@ -1,0 +1,62 @@
+html{
+    font-size:16px;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    font-size:1rem;
+}
+.asterisk{
+    color:red;
+}
+
+.grievances-header{
+    margin-right: 1rem;
+    color: white;
+    margin-top:2rem;
+    margin-left: 2rem;
+}
+.grievances-block{
+    margin : 4rem 3rem;
+
+}
+.grievances-instruction{
+    /* display:inline-flex; */
+    color:white;
+    font-size: 1.5rem;
+}
+
+textarea{
+    height: 60vh;
+    width: 100%;
+    resize:none;
+    font-size:1.1rem;
+}
+.grievances-cancel{
+    cursor: pointer;
+    background-color:white;
+    font-size:1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 4rem;
+}
+.grievances-register{
+    cursor: pointer;
+    background-color:white;
+    font-size:1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+.register-and-cancel-div{
+    display:flex;
+    margin-left:1rem;
+    justify-content:center;
+}
+
+/* size of font decreasing drastically */
+@media screen and (max-width:768) {
+    .grievances-instruction{
+        font-size:1.2rem;
+    }
+}

@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.quickinfo_card {
+    box-shadow: 0 4px 8px 0 rgb(255, 255, 255);
+    transition: 0.3s;
+    width: 200px;
+    margin: 50px;
+    color: black;
+  }
+  
+  .quickinfo_card:hover {
+    box-shadow: 0 8px 16px 0 rgb(255, 255, 255);
+  }
+  .quickinfo_card img{
+      object-fit: contain;
+      width: 100%;
+  }
+  .quickinfo_container_card {
+    padding: 2px 16px;
+    width: 185px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+  }
+  .quickinfo_container_card p{
+    color: black;
+  }
+  .allcards{
+      display: flex;
+      /* justify-content: space-around; */
+      flex-wrap: wrap;
+  }

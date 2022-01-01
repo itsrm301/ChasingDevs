@@ -17,6 +17,8 @@ import SocietyPage from "./components/SocietyPage";
 import BillReimbursementPortal from "./components/BillReimbursementPortal";
 import Career from "./Career"
 import Student from "./Student";
+import Grievances from "./components/Grievances";
+import Addachievements from "./components/Addachievements";
 // import Navbar from "./components/Navbar";
 import {
   BrowserRouter as Router,
@@ -24,7 +26,11 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import OfficeBearers from "./components/OfficeBearers";
+import OfficeStaffs from "./components/OfficeStaffs";
+import Secrataries from "./components/Secrataries";
 import StudentsProfile from "./components/StudentsProfile";
+// import Button from "./components/Button";
 
 function App() {
   const [click, setclick] = useState(true);
@@ -94,11 +100,11 @@ function App() {
                         Archives
                       </NavLink>
                     </li>
-                    <li className="nav-item navitem navitem_top">
+                    {/* <li className="nav-item navitem navitem_top">
                       <NavLink to="/profile" exact>
                         Profile
                       </NavLink>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
@@ -152,7 +158,7 @@ function App() {
                     className="btn"
                     style={
                       ({ border: "1px solid red" },
-                      click ? { top: "30px" } : { top: "150px" })
+                        click ? { top: "30px" } : { top: "150px" })
                     }
                   >
                     <button
@@ -170,17 +176,17 @@ function App() {
                         style={
                           click
                             ? {
-                                position: "absolute",
-                                top: "-10px",
-                                color: "white",
-                              }
+                              position: "absolute",
+                              top: "-10px",
+                              color: "white",
+                            }
                             : {
-                                position: "absolute",
-                                top: "-1px",
+                              position: "absolute",
+                              top: "-1px",
 
-                                fontSize: "25px",
-                                color: "red",
-                              }
+                              fontSize: "25px",
+                              color: "red",
+                            }
                         }
                       >
                         {click ? "..." : "×"}
@@ -255,17 +261,17 @@ function App() {
                         style={
                           click
                             ? {
-                                position: "absolute",
-                                top: "-10px",
-                                color: "white",
-                              }
+                              position: "absolute",
+                              top: "-10px",
+                              color: "white",
+                            }
                             : {
-                                position: "absolute",
-                                top: "-1px",
+                              position: "absolute",
+                              top: "-1px",
 
-                                fontSize: "25px",
-                                color: "red",
-                              }
+                              fontSize: "25px",
+                              color: "red",
+                            }
                         }
                       >
                         {click ? "..." : "×"}
@@ -344,17 +350,17 @@ function App() {
                         style={
                           click
                             ? {
-                                position: "absolute",
-                                top: "-10px",
-                                color: "white",
-                              }
+                              position: "absolute",
+                              top: "-10px",
+                              color: "white",
+                            }
                             : {
-                                position: "absolute",
-                                top: "-1px",
+                              position: "absolute",
+                              top: "-1px",
 
-                                fontSize: "25px",
-                                color: "red",
-                              }
+                              fontSize: "25px",
+                              color: "red",
+                            }
                         }
                       >
                         {click ? "..." : "×"}
@@ -439,17 +445,17 @@ function App() {
                         style={
                           click
                             ? {
-                                position: "absolute",
-                                top: "-10px",
-                                color: "white",
-                              }
+                              position: "absolute",
+                              top: "-10px",
+                              color: "white",
+                            }
                             : {
-                                position: "absolute",
-                                top: "-1px",
+                              position: "absolute",
+                              top: "-1px",
 
-                                fontSize: "25px",
-                                color: "red",
-                              }
+                              fontSize: "25px",
+                              color: "red",
+                            }
                         }
                       >
                         {click ? "..." : "×"}
@@ -529,17 +535,17 @@ function App() {
                         style={
                           click
                             ? {
-                                position: "absolute",
-                                top: "-10px",
-                                color: "white",
-                              }
+                              position: "absolute",
+                              top: "-10px",
+                              color: "white",
+                            }
                             : {
-                                position: "absolute",
-                                top: "-1px",
+                              position: "absolute",
+                              top: "-1px",
 
-                                fontSize: "25px",
-                                color: "red",
-                              }
+                              fontSize: "25px",
+                              color: "red",
+                            }
                         }
                       >
                         {click ? "..." : "×"}
@@ -604,6 +610,12 @@ function App() {
             </div>
           </div>
           <Switch>
+          <Route path="/Addachievements" exact>
+              <Addachievements />
+            </Route>
+          <Route path="/Grievances" exact>
+              <Grievances />
+            </Route>
             <Route path="/Events" exact>
               <Events />
             </Route>
@@ -616,6 +628,15 @@ function App() {
 
             <Route path="/Quickinfo" exact>
               <Quickinfo />
+            </Route>
+            <Route path="/Quickinfo/OfficeBearers" exact>
+              <OfficeBearers />
+            </Route>
+            <Route path="/Quickinfo/OfficeStaffs" exact>
+              <OfficeStaffs />
+            </Route>
+            <Route path="/Quickinfo/Secretaries" exact>
+              <Secrataries />
             </Route>
             <Route path="/Archives" exact>
               <Archives />
