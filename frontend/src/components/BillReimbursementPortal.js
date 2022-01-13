@@ -4,24 +4,24 @@ import axios from "axios";
 
 
 export default function BillReimbursementPortal() {
-  const remark="Nice one ,Amdani athanni kharcha ruapiya",rollType="society",orgsnName="chillX";
+  const remark="Nice one ,Amdani athanni kharcha ruapiya",rollType="society",orgsnName="13";
   const [brpData,setBrpData]=useState({lastUpdaterollno:'20EE1111',rollType:'society',organisationName:'',status:'pending',remark:''});
   const onOpen=async()=>{
-    axios.get("/api/getBrp/"+orgsnName).then(res=>console.log(res)).catch(e=>console.log(e));
+    axios.get("/api/brp/getbrp/"+orgsnName).then(res=>console.log(res)).catch(e=>console.log(e.response));
     
   }
   const onSave=async()=>{
     console.log(brpData);
-    axios.post('http://localhost:3001/api/brp/addBrp',{...brpData}).then(res=>console.log(res.data)).catch(e=>console.log(e.response));
+    axios.post('/api/brp/addBrp',{...brpData}).then(res=>console.log(res.data)).catch(e=>console.log(e.response));
   
   }
   const onUpdate=async()=>{
-    axios.post('/api/updateBrp',{...brpData}).then(res=>console.log(res)).catch(e=>console.log(e));
+    axios.post('/api/brp/updateBrp',{...brpData}).then(res=>console.log(res)).catch(e=>console.log(e.response.data));
     
   }
-  // useEffect(()=>{
-  //   onOpen();
-  // },[]);
+  useEffect(()=>{
+    onOpen();
+  },[]);
   return (
     <div className="containerBillPortal">
       <div className="BillPortalHead">

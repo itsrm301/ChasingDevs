@@ -4,11 +4,17 @@ const router=express.Router();
 const BRP=require('../modals/BRP');
 
 router.get('/getBrp/:organisation',async (req,res)=>{
-    if(req.params.organisation){
-        const brp=await BRP.find({organisationName:organisation});
-        console.log(brp);
-        if(brp){res.status(200).send({brp});}
-    }
+    try{
+        if(req.params.organisation){
+            console.log(req.params.organisation)
+            const brp=await BRP.find({organisationName:req.params.organisation});
+            console.log(brp,brp.length);
+            if(brp.length==0){res.status(404).send({error:"Entering for the first time? :)"})}
+            console.log(brp);
+            if(brp){res.status(200).send({brp});}
+        }
+    }catch(e){console.log(e)}
+
 })
 router.post('/addBrp',async (req,res)=>{
     try{
@@ -32,7 +38,7 @@ router.post('/addBrp',async (req,res)=>{
         }else{
             res.status(401).send({error:"User lastUpdaterollno not specified"})
         }
-    }catch(e){console.log(e)}
+    }catch(e){console.log(e);}
     
 });
 

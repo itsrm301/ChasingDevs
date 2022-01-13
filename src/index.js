@@ -5,7 +5,7 @@ const userRoutes = require("../routes/userroutes");
 const brpRoutes=require("../routes/brproutes");
 const app = express();
 const cors=require('cors');
-const proxy=require("http-proxy-middleware");
+
 
 const conndb = async () => { return await mongoose.connect(process.env.URI); }
 conndb().then(() => { console.log("mongDb connected"); }).catch(err => console.log(err));
