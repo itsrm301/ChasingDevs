@@ -67,7 +67,7 @@ export default function Studentlogin() {
               type="text"
               name="email"
               id="EMAIL"
-              autocomplete="off"
+              autoComplete="off"
               placeholder="Type your username"
               style={{ color: "white", border: "1px dashed rgb(221, 158, 41)" }}
               onChange={setinputusername}
@@ -99,7 +99,7 @@ export default function Studentlogin() {
               type="text"
               name="email"
               id="EMAIL"
-              autocomplete="off"
+              autoComplete="off"
               placeholder="Type your password"
               style={{ color: "white", border: "1px dashed rgb(221, 158, 41)" }}
               onChange={setinputusernamepassword}

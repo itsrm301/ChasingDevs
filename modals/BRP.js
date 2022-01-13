@@ -1,13 +1,17 @@
 const mongoose = require("mongoose");
 
 const BRPSchema = new mongoose.Schema({
-    rollno: {
+    lastUpdaterollno: {
         type: String,
         required: true
     },
     rollType: {
         type: String,
         required: true
+    },
+    organisationName:{
+        type:String,
+        required:true
     },
     status: {
         type: String,

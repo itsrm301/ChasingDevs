@@ -1,3 +1,8 @@
+.labelcss{
+    color: white;
+
+}
+
 .BillPortalHead {
     display: flex;
     justify-content: center;

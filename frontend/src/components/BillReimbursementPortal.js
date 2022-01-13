@@ -1,8 +1,27 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "./BillReimbursementPortal.css";
 import axios from "axios";
 
+
 export default function BillReimbursementPortal() {
+  const remark="Nice one ,Amdani athanni kharcha ruapiya",rollType="society",orgsnName="chillX";
+  const [brpData,setBrpData]=useState({lastUpdaterollno:'20EE1111',rollType:'society',organisationName:'',status:'pending',remark:''});
+  const onOpen=async()=>{
+    axios.get("/api/getBrp/"+orgsnName).then(res=>console.log(res)).catch(e=>console.log(e));
+    
+  }
+  const onSave=async()=>{
+    console.log(brpData);
+    axios.post('http://localhost:3001/api/brp/addBrp',{...brpData}).then(res=>console.log(res.data)).catch(e=>console.log(e.response));
+  
+  }
+  const onUpdate=async()=>{
+    axios.post('/api/updateBrp',{...brpData}).then(res=>console.log(res)).catch(e=>console.log(e));
+    
+  }
+  // useEffect(()=>{
+  //   onOpen();
+  // },[]);
   return (
     <div className="containerBillPortal">
       <div className="BillPortalHead">
@@ -10,10 +29,27 @@ export default function BillReimbursementPortal() {
       </div>
       <div>
         <h3>Image/Document Upload</h3>
-        <input type="file" />
+        <input type="file" style={{color:'white',backgroundColor:'white'}}/>
         <button onClick={console.log('uploaded')}>Upload!</button>
       </div>
-      <div className="tableContainer">
+      <div>
+        <p className="labelcss">Organisation NAme</p>
+        <input style={{color:'black',backgroundColor:'white'}} type="text" name="organisationName" value={brpData.organisationName} onChange={(e)=>{setBrpData({...brpData,organisationName:e.target.value});console.log(brpData.organisationName)}}/>
+      </div>
+      <div>
+        <p className="labelcss">Status</p>
+        {/* <input style={{color:'black',backgroundColor:'white'}} type="text" name="organisationName" value={brpData.organisationName} onChange={(e)=>{setBrpData({...brpData,organisationName:e.target.value});console.log(brpData.organisationName)}}/> */}
+      </div>
+      <div>
+        <p className="labelcss">Remarks</p>
+        {rollType==="society"?(<p style={{color:'white'}}>{remark}</p>): (<input style={{color:'black',backgroundColor:'white'}} type="text" name="organisationName" value={brpData.remark} onChange={(e)=>{setBrpData({...brpData,remark:e.target.value});console.log(brpData.remark)}}/>)}
+       
+      </div>
+      <div>
+        <button onClick={()=>onSave()} className="saveBrpBtn">Save</button>
+        <button onClick={()=>onUpdate()} className="updateBrpBtn">Update</button>
+      </div>
+      {/* <div className="tableContainer">
         <table>
           <tr>
             <th>Sl.</th>
@@ -52,7 +88,7 @@ export default function BillReimbursementPortal() {
           </tr>
          
         </table>
-      </div>
+      </div> */}
     </div>
   );
 }
