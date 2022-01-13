@@ -15,6 +15,8 @@ import Otpverificationpage from "./components/Otpverificationpage";
 import Blanktextarea from "./components/Blanktextarea";
 import SocietyPage from "./components/SocietyPage";
 import BillReimbursementPortal from "./components/BillReimbursementPortal";
+import Grievances from "./components/Grievances";
+import Addachievements from "./components/Addachievements";
 // import Navbar from "./components/Navbar";
 import {
   BrowserRouter as Router,
@@ -91,11 +93,11 @@ function App() {
                         Archives
                       </NavLink>
                     </li>
-                    <li className="nav-item navitem navitem_top">
+                    {/* <li className="nav-item navitem navitem_top">
                       <NavLink to="/profile" exact>
                         Profile
                       </NavLink>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
@@ -576,6 +578,12 @@ function App() {
             </div>
           </div>
           <Switch>
+          <Route path="/Addachievements" exact>
+              <Addachievements />
+            </Route>
+          <Route path="/Grievances" exact>
+              <Grievances />
+            </Route>
             <Route path="/Events" exact>
               <Events />
             </Route>

@@ -1,0 +1,143 @@
+html{
+    font-size:16px;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color:black;
+    /* background-color: rgb(36, 36, 36); */
+    /* background-color:grey; */
+    color:White;
+    /* color:black; */
+    font-weight:bold;
+    font-size: 1.1rem;
+}
+.asterisk{
+    color:red;
+}
+h1{
+    margin-bottom: 1rem;
+}
+.upload-achievement-certificate{
+    display: block;
+    margin:2rem;
+}
+button{
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 15px;
+    font-weight: bold;
+    font-size:1rem;
+}
+.add-cancel-btns{
+    display:flex;
+    justify-content: center;
+    margin-top:6rem;
+}
+/* for medium and large screen laptops */
+@media only screen and (min-width:992px){
+    #achievement-content-input-div{
+        margin-left: 3rem;
+        margin-top:2rem;
+    }
+     input{
+         width : 80%;
+         margin-left : 6rem;
+         margin-right : 1rem;
+         margin-top : 1rem;
+         font-size: 1.1rem;
+         border-radius : 5px;
+         padding: 3px;
+     }
+     .title-text{
+         margin-top: 1.5rem;
+         float:left;
+     }
+     .description-text{
+        float:left;
+        margin-top: 1.5rem;
+     }
+     textarea {
+         font-size: 1.1rem;
+        margin-left: 3rem;
+        margin-top : 1rem;
+        padding: 3px;
+        border-radius: 5px;
+        overflow-y: scroll; 
+        width:80%;
+        height: 45vh;
+        resize: none;    
+     }
+     .set-in-block{
+        float:left;
+    }
+    .upload-achievement-certificate{
+        display:block;
+        position:absolute;
+        right: 8%;
+    }
+    .cancel-achivement-addition{
+        margin-right:10rem;
+    }
+}
+
+ /* for small width laptops, tablets and mobiles */
+@media only screen and (max-width:991px) {
+    h1{
+        text-align:center;
+    }
+    #achievement-content-input-div{
+        margin-left: 2rem;
+        margin-top:2rem;
+        margin-right: 1rem;
+    }
+    .add-cancel-btns{
+        margin-top: 2rem;
+        margin-bottom:1rem;
+        display: flex;
+        justify-content: center;
+    }
+    input{
+        width: 90%;
+        font-size: 1.1rem;
+        padding:3px;
+        margin-right: 3rem;
+        margin-bottom:1rem;
+        border-radius: 5px;
+    }
+    textarea{
+        width:90%;
+        height: 40vh;
+        margin-right: 3rem;
+        font-size: 1.1rem;
+        padding: 3px;
+        border-radius: 5px;
+        resize:none;
+    }
+    button{
+        cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
+    }
+    .cancel-achivement-addition{
+        margin-right: 5rem;
+    }
+    .title-text{
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .cancel-achivement-addition{
+        margin-right: 3rem;
+    }
+    .upload-achievement-certificate{
+        margin-top:1rem;
+    }
+}
+.addAchievmentDescriptionPara{
+    color: white;
+}
+.inputAddAcievement{
+    background-color: white;
+}
