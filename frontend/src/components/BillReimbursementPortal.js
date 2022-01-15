@@ -1,11 +1,13 @@
 import React,{useState,useEffect} from "react";
 import "./BillReimbursementPortal.css";
 import axios from "axios";
-
+import { Link, useHistory, useLocation } from "react-router-dom";
 
 export default function BillReimbursementPortal() {
+  const history = useHistory();
+  const location = useLocation();
   const remark="Nice one ,Amdani athanni kharcha ruapiya",rollType="society",orgsnName="13";
-  const [brpData,setBrpData]=useState({lastUpdaterollno:'20EE1111',rollType:'society',organisationName:'',status:'pending',remark:''});
+  const [brpData,setBrpData]=useState({lastUpdaterollno:'20EE1111',rollType:'society',organisationName:location.state.Socname,status:'pending',remark:''});
   const onOpen=async()=>{
     axios.get("/api/brp/getbrp/"+orgsnName).then(res=>console.log(res)).catch(e=>console.log(e.response));
     
@@ -33,12 +35,15 @@ export default function BillReimbursementPortal() {
         <button onClick={console.log('uploaded')}>Upload!</button>
       </div>
       <div>
-        <p className="labelcss">Organisation NAme</p>
+        <p className="labelcss">Organisation Name</p>
         <input style={{color:'black',backgroundColor:'white'}} type="text" name="organisationName" value={brpData.organisationName} onChange={(e)=>{setBrpData({...brpData,organisationName:e.target.value});console.log(brpData.organisationName)}}/>
       </div>
-      <div>
-        <p className="labelcss">Status</p>
+      <div style={{flexDirection: 'row'}}>
+        <div className="statusinputBillPortal">
+        <span className="labelcss">Status</span>
+        <input type="checkbox" className="statusboxBillPortal"/>
         {/* <input style={{color:'black',backgroundColor:'white'}} type="text" name="organisationName" value={brpData.organisationName} onChange={(e)=>{setBrpData({...brpData,organisationName:e.target.value});console.log(brpData.organisationName)}}/> */}
+        </div>
       </div>
       <div>
         <p className="labelcss">Remarks</p>
