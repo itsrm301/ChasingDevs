@@ -9,7 +9,7 @@ const Navbar = () => {
         <div>
             <div className="defaultnav">
                 <div class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <a className="navbar-brand" href="#=">Navbar</a>
                     <div class="collapse navbar-collapse">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item active">

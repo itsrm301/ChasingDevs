@@ -1,0 +1,11 @@
+.basic_table{
+    margin-top: 50px;
+    padding: 50px;
+    background-color: white;
+}
+
+.basic_table_hallname{
+    margin:auto;
+    font-weight: bolder;
+    font-size: 18px;
+}

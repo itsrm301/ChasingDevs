@@ -654,6 +654,9 @@ function App() {
             <Route path="/Otpverificationpage" exact>
               <Otpverificationpage />
             </Route>
+            <Route path="/StudentsProfile" exact>
+              <StudentsProfile />
+            </Route>
 
             <Route path="/Blanktextarea" exact>
               <Blanktextarea />
