@@ -16,7 +16,7 @@ export default function Archives() {
       setPage(arr[0]);
     }
     else if(name==="GC"){
-      console.log("hellp");
+      // console.log("hellp");
       setPage(arr[1]);
     }
     else if(name==="InterMeet"){

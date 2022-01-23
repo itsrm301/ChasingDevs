@@ -1,15 +1,20 @@
 import React from 'react'
 import { Button } from 'bootstrap';
-import "./InterMeet.css"
+import BasicTable from './Table'
+import { gclist } from './Gclist';
 
+
+import "./InterMeet.css"
 
 function InterMeet() {
 
-
-
     return (
         <div className='inter'>
-            <h1>GENERAL CHAMPIONSHIP</h1>
+            {gclist.map((ele) => {
+                // console.log(ele);
+               
+              return(<BasicTable gc={ele} />)
+            })}
             
         </div>
     )
