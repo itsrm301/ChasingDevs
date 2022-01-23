@@ -1,6 +1,6 @@
 {
   "name": "server",
-  "homepage": "https://itsrm301.github.io/ChasingDevs",
+  
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,19 +17,17 @@
     "mongoose": "^6.1.2",
     "multer": "^1.4.4",
     "nodemon": "^2.0.15",
-    "path": "^0.12.7",
     "react-multi-carousel": "^2.6.5",
     "react-scripts": "^5.0.0",
     "shortid": "^2.2.16",
     "web-vitals": "^2.1.2"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
-    "start": "cd frontend && npm start",
-    "server": "nodemon src/index.js",
-    "dev": "concurrently \"npm run start\" \"npm run server\""
+     
+    "heroku-postbulid":"cd frontend && npm install && --only=dev --no-shrinkwrap && npm run build",
+    "start": "node src/index.js",
+    "dev": "concurrently \"npm run start\" \"npm run server\"",
+    "test":"echo \"Error: no test specified\"&&exit 1"
   },
   "eslintConfig": {
     "extends": [
@@ -53,12 +51,12 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Roy-com/ChasingDevs.git"
+    "url": "https://github.com/itsrm301/ChasingDevs.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Roy-com/ChasingDevs/issues"
+    "url": "https://github.com/itsrm301/ChasingDevs/issues"
   }
 }
