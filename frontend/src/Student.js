@@ -24,13 +24,13 @@ function Student() {
                         title="Physics Semester"
                         img="https://images.pexels.com/photos/714698/pexels-photo-714698.jpeg?cs=srgb&dl=pexels-jeshootscom-714698.jpg&fm=jpg"
                         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consectetur quia, eaque ex exercitationem, eveniet quos natus autem iste, vitae tempora impedit doloribus perspiciatis voluptatem temporibus corrupti dolorem enim voluptatibus!"
-                        link=""
+                        link="https://docs.google.com/document/d/1C8ZvdjPRMM-Zpp4_bpBQx6_QJJqfYm3iyMyfQ8aJZ2U/edit?usp=sharing"
                     />
                     <MultiActionAreaCard
                         title="Chemistry Sem"
                         img="https://images.pexels.com/photos/8325710/pexels-photo-8325710.jpeg?cs=srgb&dl=pexels-kindel-media-8325710.jpg&fm=jpg"
                         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consectetur quia, eaque ex exercitationem, eveniet quos natus autem iste, vitae tempora impedit doloribus perspiciatis voluptatem temporibus corrupti dolorem enim voluptatibus!"
-                        link=""
+                        link="https://docs.google.com/document/d/1C8ZvdjPRMM-Zpp4_bpBQx6_QJJqfYm3iyMyfQ8aJZ2U/edit?usp=sharing"
                     />
                 </div>
             </div>
