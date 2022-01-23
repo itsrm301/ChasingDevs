@@ -15,6 +15,8 @@ import Otpverificationpage from "./components/Otpverificationpage";
 import Blanktextarea from "./components/Blanktextarea";
 import SocietyPage from "./components/SocietyPage";
 import BillReimbursementPortal from "./components/BillReimbursementPortal";
+import Career from "./Career"
+import Student from "./Student";
 import Grievances from "./components/Grievances";
 import Addachievements from "./components/Addachievements";
 // import Navbar from "./components/Navbar";
@@ -83,6 +85,11 @@ function App() {
                         Students' Point
                       </NavLink>
                     </li>
+                    <li className="nav-item navitem navitem_top">
+                      <NavLink to="/careerspoint" exact>
+                        Careers' Point
+                      </NavLink>
+                    </li>
                     <li className="nav-item navitem navitem_top ">
                       <NavLink to="/quickinfo" exact>
                         Quick Info
@@ -138,6 +145,11 @@ function App() {
                       <li className="nav-item navitem navitem_top">
                         <NavLink to="/studentspoint" exact>
                           Students' Point
+                        </NavLink>
+                      </li>
+                      <li className="nav-item navitem navitem_top">
+                        <NavLink to="/careerspoint" exact>
+                          Careers' Point
                         </NavLink>
                       </li>
                     </ul>
@@ -283,6 +295,11 @@ function App() {
                         Students' Point
                       </NavLink>
                     </li>
+                    <li className="nav-item  ml-auto navitem navitem_top">
+                      <NavLink to="/careerspoint" exact>
+                        Careers' Point
+                      </NavLink>
+                    </li>
                     <li className="nav-item ml-auto navitem navitem_top">
                       <NavLink to="/quickinfo" exact>
                         Quick Info
@@ -375,6 +392,11 @@ function App() {
                     <li className="nav-item ml-auto  navitem navitem_top">
                       <NavLink to="/studentspoint" exact>
                         Students' Point
+                      </NavLink>
+                    </li>
+                    <li className="nav-item ml-auto  navitem navitem_top">
+                      <NavLink to="/careerspoint" exact>
+                        Careers' Point
                       </NavLink>
                     </li>
                     <li className="nav-item ml-auto  navitem navitem_top">
@@ -473,6 +495,11 @@ function App() {
                       </NavLink>
                     </li>
                     <li className="nav-item ml-auto  navitem navitem_top">
+                      <NavLink to="/careerspoint" exact>
+                        Careers' Point
+                      </NavLink>
+                    </li>
+                    <li className="nav-item ml-auto  navitem navitem_top">
                       <NavLink to="/quickinfo" exact>
                         Quick Info
                       </NavLink>
@@ -563,6 +590,11 @@ function App() {
                       </NavLink>
                     </li>
                     <li className="nav-item ml-auto navitem navitem_top">
+                      <NavLink to="/careerspoint" exact>
+                        Careers' Point
+                      </NavLink>
+                    </li>
+                    <li className="nav-item ml-auto navitem navitem_top">
                       <NavLink to="/quickinfo" exact>
                         Quick Info
                       </NavLink>
@@ -635,8 +667,11 @@ function App() {
             <Route path="/" exact>
               <Home />
             </Route>
-            <Route path="/StudentsProfile" exact>
-              <StudentsProfile />
+            <Route path="/studentspoint" exact>
+              <Student />
+            </Route>
+            <Route path="/careerspoint" exact>
+              <Career />
             </Route>
             <Redirect to="/" />
           </Switch>

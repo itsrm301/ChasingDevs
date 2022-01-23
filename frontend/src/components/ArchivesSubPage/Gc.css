@@ -1,0 +1,20 @@
+
+.gc{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 50px 0;
+}
+
+.gc_rank{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.gc_rank  img , .gc_rank h2{
+    width: 400px;
+    margin: 0 100px;
+}
+
