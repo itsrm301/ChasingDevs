@@ -1,9 +1,19 @@
+.labelcss{
+    color: white;
+    margin-left: 20px;
+}
+
+.statusboxBillPortal {
+    margin-left: -20px;
+}
+
 .BillPortalHead {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: white;
+    padding: 20px;
 }
 .containerBillPortal h3{
     color: white;
@@ -15,6 +25,9 @@
 .containerBillPortal button {
     color: black;
     padding: 5px;
+}
+.statusinputBillPortal {
+    display: flex;
 }
 .tableContainer {
     display: flex;

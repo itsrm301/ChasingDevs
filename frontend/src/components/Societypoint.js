@@ -1,5 +1,6 @@
 import React from "react";
 import SOC_DATA from "../SOC_DATA.json";
+
 import "./SocietyPoint.css";
 import { useState } from "react";
 
@@ -38,6 +39,10 @@ export default function Societypoint() {
             >
               {val.soc_name}
             </button>
+            {/* <img
+              src={process.env.PUBLIC_URL + "/image/swgicon.jpeg"}
+              alt="Image One"
+            /> */}
           </div>
         );
       })}
