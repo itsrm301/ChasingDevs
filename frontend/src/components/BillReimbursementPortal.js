@@ -1,25 +1,17 @@
 import React, { useState, useEffect } from "react";
 import "./BillReimbursementPortal.css";
 import axios from "axios";
-
+import { Link, useHistory, useLocation } from "react-router-dom";
 export default function BillReimbursementPortal() {
-  const remark = "Nice one ,Amdani athanni kharcha ruapiya",
-    rollType = "society",
-    orgsnName = "13";
-  const [brpData, setBrpData] = useState({
-    lastUpdaterollno: "20EE1111",
-    rollType: "society",
-    organisationName: "",
-    status: "pending",
-    remark: "",
-  });
-  const onOpen = async () => {
-    axios
-      .get("/api/brp/getbrp/" + orgsnName)
-      .then((res) => console.log(res))
-      .catch((e) => console.log(e.response));
-  };
-  const onSave = async () => {
+  const history = useHistory();
+  const location = useLocation();
+  const remark="Nice one ,Amdani athanni kharcha ruapiya",rollType="society",orgsnName="13";
+  const [brpData,setBrpData]=useState({lastUpdaterollno:'20EE1111',rollType:'society',organisationName:location.state.Socname,status:'pending',remark:''});
+  const onOpen=async()=>{
+    axios.get("/api/brp/getbrp/"+orgsnName).then(res=>console.log(res)).catch(e=>console.log(e.response));
+    
+  }
+  const onSave=async()=>{
     console.log(brpData);
     axios
       .post("/api/brp/addBrp", { ...brpData })
@@ -49,21 +41,15 @@ export default function BillReimbursementPortal() {
         <button onClick={console.log("uploaded")}>Upload!</button>
       </div>
       <div>
-        <p className="labelcss">Organisation NAme</p>
-        <input
-          style={{ color: "black", backgroundColor: "white" }}
-          type="text"
-          name="organisationName"
-          value={brpData.organisationName}
-          onChange={(e) => {
-            setBrpData({ ...brpData, organisationName: e.target.value });
-            console.log(brpData.organisationName);
-          }}
-        />
+        <p className="labelcss">Organisation Name</p>
+        <input style={{color:'black',backgroundColor:'white'}} type="text" name="organisationName" value={brpData.organisationName} onChange={(e)=>{setBrpData({...brpData,organisationName:e.target.value});console.log(brpData.organisationName)}}/>
       </div>
-      <div>
-        <p className="labelcss">Status</p>
+      <div style={{flexDirection: 'row'}}>
+        <div className="statusinputBillPortal">
+        <span className="labelcss">Status</span>
+        <input type="checkbox" className="statusboxBillPortal"/>
         {/* <input style={{color:'black',backgroundColor:'white'}} type="text" name="organisationName" value={brpData.organisationName} onChange={(e)=>{setBrpData({...brpData,organisationName:e.target.value});console.log(brpData.organisationName)}}/> */}
+        </div>
       </div>
       <div>
         <p className="labelcss">Remarks</p>
@@ -90,46 +76,7 @@ export default function BillReimbursementPortal() {
           Update
         </button>
       </div>
-      {/* <div className="tableContainer">
-        <table>
-          <tr>
-            <th>Sl.</th>
-            <th>Uploaded File</th>
-            <th>Roll Number</th>
-            <th>Verification Status</th>
-            <th>Remarks</th>
-          </tr>
-          <tr>
-            <td>1.</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-          <td>2.</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>3.</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>4.</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-         
-        </table>
-      </div> */}
+      
     </div>
   );
 }

@@ -129,7 +129,7 @@ export default function SocietyPage() {
       <div className="buttonBox">
         <button
           onClick={() => {
-            history.push("/BillReimbursementPortal");
+            history.push("/BillReimbursementPortal", {Socname: Socname});
           }}
         >
           Bill Reimbursement Portal
