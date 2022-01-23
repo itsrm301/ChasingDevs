@@ -3,6 +3,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const userRoutes = require("../routes/userroutes");
 const brpRoutes=require("../routes/brproutes");
+const sgfRoutes=require("../routes/sgfRoutes");
+const udcRoutes=require("../routes/UDCroutes");
 const app = express();
 const cors=require('cors');
 
@@ -22,7 +24,8 @@ app.use(cors({
 
 app.use("/api/user", userRoutes);
 app.use("/api/brp",brpRoutes);
-
+app.use("/api/sgf",sgfRoutes);
+app.use("/api/UDC",udcRoutes);
 
 const port = process.env.PORT || 3001;
 app.listen(port, () => { console.log(`listenning on port ${port}`) });
