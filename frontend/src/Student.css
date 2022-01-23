@@ -1,0 +1,63 @@
+.student{
+    display: flex;
+    flex-direction: column;
+    height: 120%;
+    background-color: black;
+  }
+  
+  .student_title{
+    display: flex;
+    min-height: 1050px;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+  
+    background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?cs=srgb&dl=pexels-stanley-morales-1454360.jpg&fm=jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 150%;
+  }
+  
+  .student_title > h1{
+    font-size: 100px;
+    font-weight: bolder;
+    margin: auto;
+    color: white;
+  }
+  
+  .student_headerTop {
+    background-color: black;
+  
+  }
+  
+  .student_headerTop > h1{
+    background-color: black;
+    color: white;
+    padding: 30px 0 30px 45%;
+    margin: 0;
+  }
+  
+  .student_header{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
+  }
+  
+  .student_questionBot{
+    margin: auto;
+    padding: 50px 0;
+  }
+  .student_questionBot > h1{
+    padding-bottom: 25px;
+  }
+  .student_question{
+    
+    margin-left: 12%;
+    width: 350px;
+    padding: 50px 0;
+    transform: scale(1.2);
+  }

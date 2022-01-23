@@ -1,0 +1,16 @@
+.card{
+    min-width: 300px;
+}
+
+.card_media{
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.card > a{
+    text-decoration: none;
+}
+
+.car button{
+    padding: 0;
+}

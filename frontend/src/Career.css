@@ -1,0 +1,56 @@
+.career{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: #c4c4c4;
+    width: 100%;
+  }
+  
+  .career_title{
+    display: flex;
+    min-height: 1050px;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+  
+    background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/3771097/pexels-photo-3771097.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-3771097.jpg&fm=jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  }
+  
+  .career_title > h1{
+    font-size: 100px;
+    font-weight: bolder;
+    margin: auto;
+    color: white;
+  }
+
+  .career_sec:nth-child(even){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    padding: 50px;
+    background-color: black;
+  }
+  .career_sec:nth-child(odd){
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #c4c4c4;
+    padding: 50px;
+  }
+
+  .career_desc{
+    width: 50%;
+    flex: 1;
+    align-self: center;
+    padding: 20px;
+  }
+
+  .career_head{
+    padding: 50px 0;;
+  }
+
+ 
